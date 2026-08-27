@@ -198,8 +198,10 @@ summary:focus-visible {
 
 /* 5. HEADER / NAV ======================================================== */
 .site-header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 100;
   padding-block: .7rem;
   background: transparent;
@@ -302,7 +304,7 @@ summary:focus-visible {
 /* --- Hero --- */
 .hero {
   position: relative;
-  margin-top: -4.6rem;
+  margin-top: 0;
   padding-top: 7.5rem;
   padding-bottom: clamp(3rem, 6vw, 5rem);
   overflow: hidden;
