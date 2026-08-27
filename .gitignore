@@ -1,5 +1,6 @@
 # Source material — not for deployment
-img/
+img/*
+!img/recent-installation-*.jpg
 private do not use/
 ai-website-cloner-template-master/
 ai-website-cloner-template-master.zip

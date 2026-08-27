@@ -401,6 +401,72 @@ summary:focus-visible {
 
 .hero .cta-row { margin-top: 1.6rem; }
 
+/* --- Recent installations --- */
+.recent-installs { background: #fff; }
+.recent-installs .section-head { margin-bottom: clamp(1.5rem, 3vw, 2.25rem); }
+.recent-installs__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(.85rem, 2vw, 1.25rem);
+}
+.recent-install {
+  position: relative;
+  min-width: 0;
+  margin: 0;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  background: var(--brand-pale);
+  box-shadow: var(--shadow-sm);
+}
+.recent-install img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .35s ease;
+}
+.recent-install:hover img { transform: scale(1.025); }
+.recent-install__chip {
+  position: absolute;
+  left: .85rem;
+  bottom: .85rem;
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .2rem .55rem;
+  max-width: calc(100% - 1.7rem);
+  padding: .55rem .8rem;
+  border: 1px solid rgba(255, 255, 255, .8);
+  border-radius: var(--pill);
+  background: rgba(255, 255, 255, .93);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 6px 18px rgba(8, 28, 48, .18);
+  color: var(--navy);
+  font-size: .78rem;
+  line-height: 1.3;
+}
+.recent-install__chip strong { color: var(--brand-dark); }
+.recent-install__chip span::before { content: "\2022"; margin-right: .55rem; color: var(--brand); }
+
+@media (max-width: 619px) {
+  .recent-install--baulkham-hills img { object-position: 50% 20%; }
+  .recent-install--rose-bay img { object-position: 50% 35%; }
+  .recent-install--cronulla img { object-position: 50% 30%; }
+  .recent-install--parramatta img { object-position: 50% 45%; }
+}
+@media (min-width: 620px) {
+  .recent-installs__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .recent-install { aspect-ratio: 3 / 4; }
+  .recent-install--featured {
+    grid-column: 1 / -1;
+    aspect-ratio: 16 / 8;
+  }
+}
+@media (min-width: 980px) {
+  .recent-installs__grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .recent-install--featured { aspect-ratio: 16 / 6.5; }
+}
+
 
 
 /* --- Wave divider --- */
