@@ -62,21 +62,39 @@ css/styles.css          Tokens → base → utilities → components → landing
 js/main.js              Mobile nav, sticky header state, quote form handling
 images/                 Optimised WebP assets + favicons + share image
 img/                    Original supplied source images (not served)
-_headers                Cloudflare Pages security + cache headers
+_headers                Security + cache headers
 _redirects              Blocks public access to the template sources
+.assetsignore           What Wrangler must NOT upload (node_modules, sources, source material)
+wrangler.jsonc          Worker name + assets directory for `wrangler deploy`
 robots.txt, sitemap.xml
 ```
 
-## Deploying to Cloudflare Pages
+## Deploying to Cloudflare
 
-- **Build command:** *(none)*
-- **Build output directory:** `/` (repository root)
+Deployed as a **Cloudflare Worker with static assets** (`npx wrangler deploy`), not as a
+Pages project. Configuration is committed in `wrangler.jsonc`:
 
-`_headers` sets immutable caching on `/images/*` plus basic security headers.
+- **Worker name:** `waterfiltrationsydney`
+- **Assets directory:** `.` (repository root — the built HTML lives there)
 
-**Before deploying:** `img/`, `private do not use/` and the cloner template sit in the
-repo root and would otherwise be published. `.gitignore` covers them for a git-connected
-deploy — if you drag-and-drop the folder into the dashboard instead, remove them first.
+### .assetsignore is load-bearing
+
+Wrangler uploads *everything* in the assets directory, and a single asset over 25 MiB
+fails the whole deploy. `.assetsignore` (gitignore syntax, read from the assets directory
+root) keeps out:
+
+- `node_modules/` — the deploy installs Wrangler here, and `node_modules/workerd/bin/workerd`
+  is ~146 MiB. This is what caused the "Asset too large" deploy failure.
+- `pages/`, `templates/`, `site.json`, `build.js` — template sources; they are not routes.
+- `img/` (except the five committed `recent-installation-*.jpg` the site actually uses),
+  `private do not use/`, `marketingskills/`, the cloner template, and the brief XML.
+
+If you add a large folder to the repo, add it to `.assetsignore` too, or the next deploy
+fails.
+
+`_headers` (security + cache headers) and `_redirects` are both honoured by Workers static
+assets. Redirects run before headers, and only 301/302/303/307/308 are supported — there
+is no 404 status, so the source-path rules redirect to `/`.
 
 ## Templates
 
@@ -102,11 +120,8 @@ or JS-disabled visitors to miss. Built pages must live at the root so relative `
 `css/` and `js/` paths resolve.
 
 `pages/`, `templates/`, `site.json`, `build.js` and `package.json` are source, not routes.
-They are `Disallow`ed in `robots.txt` and, more importantly, redirected to `/` by
-`_redirects` — Cloudflare Pages applies redirects *before* static assets, so those paths
-cannot be fetched. (If you would rather the source files were never uploaded at all, the
-alternative is building into a `dist/` directory and pointing the Pages project at it:
-build command `node build.js`, output directory `dist`.)
+They are excluded from the deploy entirely by `.assetsignore`, so they are never uploaded;
+`robots.txt` and `_redirects` cover them as well, in case the deploy config changes.
 
 ### Adding a page
 

@@ -1,0 +1,37 @@
+# Files in the repo that must NOT be uploaded as static assets.
+# Same syntax as .gitignore. Wrangler reads this from the assets directory root.
+
+# Build tooling installed during the deploy (workerd alone is 146 MiB and
+# exceeds the 25 MiB per-asset limit — this is what broke the deploy)
+node_modules
+.wrangler
+package.json
+package-lock.json
+bun.lock
+bun.lockb
+wrangler.jsonc
+wrangler.toml
+
+# Site source — the built HTML at the root is what gets served
+pages
+templates
+site.json
+build.js
+
+# Repo material that was never meant to be public.
+# img/ holds the original supplied photos; only the five recent-installation
+# JPGs referenced by the site are committed, so they must stay uploadable.
+img/*
+!img/recent-installation-*.jpg
+private do not use
+marketingskills
+ai-website-cloner-template-master
+ai-website-cloner-template-master.zip
+*.xml.bak
+Landing Page Content Outline  Framework safewaterfiltration.xml
+README.md
+AGENTS.md
+CLAUDE.md
+.git
+.gitignore
+.assetsignore

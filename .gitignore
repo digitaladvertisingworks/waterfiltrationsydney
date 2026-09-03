@@ -5,3 +5,7 @@ private do not use/
 ai-website-cloner-template-master/
 ai-website-cloner-template-master.zip
 Landing Page Content Outline  Framework safewaterfiltration.xml
+
+# Deploy tooling
+node_modules/
+.wrangler/

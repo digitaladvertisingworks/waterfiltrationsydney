@@ -1,0 +1,11 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "waterfiltrationsydney",
+  "compatibility_date": "2026-08-31",
+  "observability": { "enabled": true },
+  "assets": {
+    // The built HTML lives at the repo root; .assetsignore keeps sources,
+    // node_modules and source material out of the upload.
+    "directory": "."
+  }
+}

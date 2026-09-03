@@ -1,8 +1,10 @@
-# Template sources are not part of the public site. Cloudflare Pages applies
-# redirects before static assets, so these paths can never be fetched even
-# though the files sit in the repo.
-/pages/*      /  301
-/templates/*  /  301
-/site.json    /  301
-/build.js     /  301
-/package.json /  301
+# Source paths are not part of the public site. Workers static assets applies
+# redirects before serving assets, so these can never be fetched even if the
+# files end up in the upload. (.assetsignore keeps them out of it as well.)
+/pages/*            /  301
+/templates/*        /  301
+/marketingskills/*  /  301
+/site.json          /  301
+/build.js           /  301
+/package.json       /  301
+/wrangler.jsonc     /  301
