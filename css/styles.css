@@ -235,7 +235,7 @@ summary:focus-visible {
 .primary-nav ul {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: clamp(.8rem, 1.5vw, 1.4rem);
   list-style: none;
   margin: 0;
   padding: 0;
@@ -244,7 +244,8 @@ summary:focus-visible {
 .primary-nav a {
   color: var(--navy);
   font-weight: 600;
-  font-size: .93rem;
+  font-size: clamp(.86rem, .95vw, .93rem);
+  white-space: nowrap;
   text-decoration: none;
   padding: .4rem 0;
   border-bottom: 2px solid transparent;
@@ -274,7 +275,7 @@ summary:focus-visible {
 .nav-toggle[aria-expanded="true"] .icon--close { display: block; }
 
 /* Mobile drawer */
-@media (max-width: 979px) {
+@media (max-width: 1119px) {
   .brand img { width: 142px; }
   .primary-nav {
     display: none;
@@ -292,9 +293,13 @@ summary:focus-visible {
   .primary-nav a { display: block; padding: .85rem .2rem; border-bottom: 0; }
   .primary-nav .nav-cta { margin-top: .9rem; border-top: 0; }
   .primary-nav .nav-cta .btn { width: 100%; }
+}
+/* The pill phone button stays in the bar on tablets; only phones lose it,
+   where the sticky mobile call bar takes over. */
+@media (max-width: 979px) {
   .header-cta { display: none; }
 }
-@media (min-width: 980px) {
+@media (min-width: 1120px) {
   .nav-toggle { display: none; }
   .primary-nav .nav-cta { display: none; }
 }
