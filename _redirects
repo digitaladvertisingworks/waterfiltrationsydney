@@ -1,6 +1,14 @@
-# Source paths are not part of the public site. Workers static assets applies
-# redirects before serving assets, so these can never be fetched even if the
-# files end up in the upload. (.assetsignore keeps them out of it as well.)
+# Clean URLs. Workers static assets already serves /services from services.html
+# and 307s the .html form; these rules make that a permanent 301 instead, so
+# any link or index entry pointing at the old .html URL consolidates properly.
+/index.html         /               301
+/services.html      /services       301
+/service-areas.html /service-areas  301
+/contact-us.html    /contact-us     301
+
+# Source paths are not part of the public site. Redirects run before assets, so
+# these can never be fetched even if a file ends up in the upload.
+# (.assetsignore keeps them out of it as well.)
 /pages/*            /  301
 /templates/*        /  301
 /marketingskills/*  /  301

@@ -96,6 +96,18 @@ fails.
 assets. Redirects run before headers, and only 301/302/303/307/308 are supported — there
 is no 404 status, so the source-path rules redirect to `/`.
 
+### Clean URLs
+
+Pages are served without the `.html` extension: `services.html` answers at `/services`.
+That is Workers' default `html_handling: "auto-trailing-slash"` — a request for `/services`
+returns 200, and `/services.html` redirects. Wrangler's own redirect is a 307, so
+`_redirects` overrides it with a 301 per page for link-equity consolidation.
+
+Consequences for authoring: the `path` in a page's front matter is the clean URL
+(`path: /services`), which is what canonical, `og:url` and the JSON-LD `@id` values use,
+and internal links are written `/services`, never `/services.html`. The built file at the
+root keeps its `.html` name — only the URL drops it.
+
 ## Templates
 
 Pages share one layout so the header, footer, `<head>` and icon sprite are written once.
@@ -131,7 +143,7 @@ Create `pages/about.html`:
 ---
 title: About Us | Safe Water Filtration
 description: Meta description for this page.
-path: /about.html
+path: /about
 ---
   <section class="section">
     <div class="container">
