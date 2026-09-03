@@ -73,13 +73,16 @@ deploy — if you drag-and-drop the folder into the dashboard instead, remove th
 
 ## Connecting the quote form
 
-It works with no backend today: submissions open the visitor's email client pre-filled to
-`accounts@safewaterfiltration.com.au`. To post to a form service instead, set the endpoint
-at the top of `js/main.js`:
+The form posts to Web3Forms, which emails submissions to `quote@waterfiltration.sydney`.
+The endpoint is set at the top of `js/main.js` and the account key is a hidden
+`access_key` field in the form markup:
 
 ```js
-const FORM_ENDPOINT = 'https://…';   // Formspree, Web3Forms, a Cloudflare Worker, etc.
+const FORM_ENDPOINT = 'https://api.web3forms.com/submit';
 ```
+
+Clear `FORM_ENDPOINT` to fall back to opening the visitor's email client pre-filled to
+`quote@waterfiltration.sydney` — useful for local testing.
 
 With an endpoint set, the form submits by `fetch` and shows an inline success or error
 message without leaving the page. Validation and error states work either way.

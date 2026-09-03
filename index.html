@@ -107,7 +107,11 @@
           <span class="eyebrow">Free Water Assessment</span>
           <h2>See What&rsquo;s Really Coming Out of Your Taps?</h2>
           <p class="form-lede"><strong>Free Water Quality Testing Audit + $0 Callout</strong></p>
-          <form data-quote-form novalidate>
+          <form data-quote-form action="https://api.web3forms.com/submit" method="POST" novalidate>
+            <input type="hidden" name="access_key" value="0d4f5414-2830-4d0d-855e-94356e8ebe40">
+            <input type="hidden" name="subject" value="New water filtration quote request — waterfiltration.sydney">
+            <input type="hidden" name="from_name" value="Safe Water Filtration website">
+            <input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
             <div class="form-grid">
               <div class="field">
                 <label for="name">Name</label>
@@ -692,7 +696,8 @@
         <h2>Contact Us</h2>
         <ul class="footer-list">
           <li><a href="tel:+61421601540"><svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg>0421 601 540</a></li>
-          <li><a href="mailto:accounts@safewaterfiltration.com.au"><svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg>accounts@safewaterfiltration.com.au</a></li>
+          <li><a href="mailto:quote@waterfiltration.sydney"><svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg>quote@waterfiltration.sydney</a></li>
+          <li><span><svg class="icon" aria-hidden="true" style="width:16px;height:16px;fill:var(--brand);vertical-align:-3px;margin-right:.4rem"><use href="#i-pin"></use></svg>Sussex St, Sydney NSW 2000</span></li>
           <li><span><svg class="icon" aria-hidden="true" style="width:16px;height:16px;fill:var(--brand);vertical-align:-3px;margin-right:.4rem"><use href="#i-pin"></use></svg>Sydney Metro &amp; Greater Sydney</span></li>
         </ul>
         <p style="margin-top:1rem">NSW Licensed Contractor &amp; Qualified Supervisor No. 358626C</p>
@@ -722,7 +727,7 @@
       "name": "Safe Water Filtration",
       "url": "https://safewaterfiltration.com.au/",
       "telephone": "+61421601540",
-      "email": "accounts@safewaterfiltration.com.au",
+      "email": "quote@waterfiltration.sydney",
       "image": "https://safewaterfiltration.com.au/images/safe-water-filtration-share.jpg",
       "logo": "https://safewaterfiltration.com.au/images/safe-water-filtration-logo.webp",
       "description": "Residential and commercial water filtration installation across Sydney Metro and Greater Sydney. Whole-house filtration, under-sink drinking water filters, reverse osmosis systems, filter replacement and servicing.",
@@ -730,7 +735,7 @@
         { "@type": "City", "name": "Sydney" },
         { "@type": "AdministrativeArea", "name": "Greater Sydney" }
       ],
-      "address": { "@type": "PostalAddress", "addressRegion": "NSW", "addressCountry": "AU" },
+      "address": { "@type": "PostalAddress", "streetAddress": "Sussex St", "addressLocality": "Sydney", "addressRegion": "NSW", "postalCode": "2000", "addressCountry": "AU" },
       "makesOffer": {
         "@type": "Offer",
         "itemOffered": { "@type": "Service", "name": "Water Filtration Installation Service", "serviceType": "Water filtration system installation" }

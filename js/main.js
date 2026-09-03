@@ -7,8 +7,8 @@
    Cloudflare Worker, etc). While it is left empty the form falls back to
    opening the visitor's email client with the enquiry pre-filled, so the
    site still works on a plain static host.                                */
-const FORM_ENDPOINT = '';
-const FALLBACK_EMAIL = 'accounts@safewaterfiltration.com.au';
+const FORM_ENDPOINT = 'https://api.web3forms.com/submit';
+const FALLBACK_EMAIL = 'quote@waterfiltration.sydney';
 
 (function () {
   'use strict';
