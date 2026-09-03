@@ -4,8 +4,10 @@ Single-page static site for Safe Water Filtration, built as a visual clone of
 safewaterfiltration.com.au and structured as a conversion landing page for Google Ads
 (intent-driven) and Facebook Ads (interruption-driven) traffic.
 
-No frameworks, no build step. Semantic HTML5, plain CSS with shared custom properties,
-one small vanilla JS file. Deploys to Cloudflare Pages as-is.
+No frameworks, no dependencies. Semantic HTML5, plain CSS with shared custom properties,
+one small vanilla JS file. Pages are assembled from a shared layout by a ~130-line Node
+script (see **Templates**), and the built HTML is committed at the site root, so Cloudflare
+Pages still deploys the repo as-is with no build command.
 
 ## Page structure
 
@@ -51,12 +53,17 @@ hero image, re-check those numbers before shipping.
 ## Files
 
 ```
-index.html              The site
+index.html              The built site (generated — edit pages/index.html, then build)
+pages/                  Page sources: front matter + the content for <main>
+templates/              base.html + partials/ (header, footer, mobile bar, icon sprite)
+site.json               Site-wide template variables
+build.js                node build.js — assembles pages/ + templates/ into root HTML
 css/styles.css          Tokens → base → utilities → components → landing blocks
 js/main.js              Mobile nav, sticky header state, quote form handling
 images/                 Optimised WebP assets + favicons + share image
 img/                    Original supplied source images (not served)
 _headers                Cloudflare Pages security + cache headers
+_redirects              Blocks public access to the template sources
 robots.txt, sitemap.xml
 ```
 
@@ -71,6 +78,73 @@ robots.txt, sitemap.xml
 repo root and would otherwise be published. `.gitignore` covers them for a git-connected
 deploy — if you drag-and-drop the folder into the dashboard instead, remove them first.
 
+## Templates
+
+Pages share one layout so the header, footer, `<head>` and icon sprite are written once.
+
+```
+templates/base.html         the document shell: <head>, header, <main>, footer, scripts
+templates/partials/         header.html, footer.html, mobile-bar.html, icon-sprite.html
+pages/<name>.html           one file per page: front matter + the content for <main>
+site.json                   site-wide values (site_url, css_version, theme_color, …)
+build.js                    assembles pages/ + templates/ -> <name>.html at the root
+```
+
+Build after editing anything in `pages/`, `templates/` or `site.json`:
+
+```sh
+node build.js          # writes index.html (and any other page) at the repo root
+node build.js --check  # exits 1 if the committed HTML is stale — use in CI
+```
+
+Output is plain static HTML: no client-side injection, so there is nothing for crawlers
+or JS-disabled visitors to miss. Built pages must live at the root so relative `images/`,
+`css/` and `js/` paths resolve.
+
+`pages/`, `templates/`, `site.json`, `build.js` and `package.json` are source, not routes.
+They are `Disallow`ed in `robots.txt` and, more importantly, redirected to `/` by
+`_redirects` — Cloudflare Pages applies redirects *before* static assets, so those paths
+cannot be fetched. (If you would rather the source files were never uploaded at all, the
+alternative is building into a `dist/` directory and pointing the Pages project at it:
+build command `node build.js`, output directory `dist`.)
+
+### Adding a page
+
+Create `pages/about.html`:
+
+```html
+---
+title: About Us | Safe Water Filtration
+description: Meta description for this page.
+path: /about.html
+---
+  <section class="section">
+    <div class="container">
+      <h1>About us</h1>
+    </div>
+  </section>
+```
+
+Then `node build.js` writes `about.html`. Front-matter keys fill `{{ placeholders }}` in
+the layout and override `site.json`; `og_title` and `og_description` fall back to `title`
+and `description`. Two optional named blocks add page-specific `<head>` tags and JSON-LD:
+
+```html
+<!-- @block head -->
+<link rel="preload" as="image" href="images/hero.webp" fetchpriority="high">
+<!-- @endblock -->
+
+<!-- @block schema -->
+<script type="application/ld+json"> … </script>
+<!-- @endblock -->
+```
+
+Everything outside the blocks is the page content and lands inside `<main id="main">`.
+Header and footer links to homepage sections are written `{{ home }}#anchor` — `home` is
+empty on `pages/index.html` (so links stay `#anchor`) and `/` everywhere else, from
+`site.json`. Adding a partial is a file in `templates/partials/` plus a
+`{{> name.html }}` line in `base.html`.
+
 ## Connecting the quote form
 
 The form posts to Web3Forms, which emails submissions to `quote@waterfiltration.sydney`.
@@ -83,6 +157,19 @@ const FORM_ENDPOINT = 'https://api.web3forms.com/submit';
 
 Clear `FORM_ENDPOINT` to fall back to opening the visitor's email client pre-filled to
 `quote@waterfiltration.sydney` — useful for local testing.
+
+### Form and secrets
+
+The Web3Forms access key is a *public* key: the browser has to send it, so it is visible
+in the page source no matter where it is stored, and no amount of obfuscation changes
+that. Restrict it to the live domain in the Web3Forms dashboard — that, not hiding it, is
+the control.
+
+Nothing else belongs in this repo's frontend. `build.js` reads no `.env` and refuses to
+write a page containing anything that matches a private-credential pattern (`sk_…`,
+`AKIA…`, `AIza…`, `client_secret: "…"`, PEM blocks). If a future feature needs a real
+secret, it goes in a Cloudflare Pages Function or another server-side handler, with only
+its endpoint URL in the client.
 
 With an endpoint set, the form submits by `fetch` and shows an inline success or error
 message without leaving the page. Validation and error states work either way.
@@ -105,6 +192,8 @@ and the copy avoids fear-based messaging about Sydney tap water.
 ## Editing notes
 
 - The service name **"Water Filtration Installation Service"** is fixed — do not reword it.
-- The icon sprite is inlined at the top of `<body>`; keep `<symbol>` ids in sync if you add icons.
+- Edit `pages/` and `templates/`, never the generated HTML at the root — run `node build.js` after.
+- The icon sprite lives in `templates/partials/icon-sprite.html` and is inlined at the top of
+  `<body>`; keep `<symbol>` ids in sync if you add icons.
 - The hero backdrop must stay un-lazy (`fetchpriority="high"`) to protect LCP.
 - Nav switches to the mobile drawer below 980px.

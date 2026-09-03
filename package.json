@@ -1,0 +1,9 @@
+{
+  "name": "safe-water-filtration-site",
+  "private": true,
+  "description": "Static site for Safe Water Filtration — templates in templates/ + pages/, built by build.js",
+  "scripts": {
+    "build": "node build.js",
+    "check": "node build.js --check"
+  }
+}

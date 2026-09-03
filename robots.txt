@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /pages/
+Disallow: /templates/
 
 Sitemap: https://safewaterfiltration.com.au/sitemap.xml

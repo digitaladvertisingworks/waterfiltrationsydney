@@ -1,0 +1,8 @@
+# Template sources are not part of the public site. Cloudflare Pages applies
+# redirects before static assets, so these paths can never be fetched even
+# though the files sit in the repo.
+/pages/*      /  301
+/templates/*  /  301
+/site.json    /  301
+/build.js     /  301
+/package.json /  301

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ title }}</title>
+<meta name="description" content="{{ description }}">
+<link rel="canonical" href="{{ site_url }}{{ path }}">
+<meta name="theme-color" content="{{ theme_color }}">
+<link rel="icon" href="images/favicon-32.png" sizes="32x32">
+<link rel="icon" href="images/icon-512.png" sizes="512x512">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ og_title }}">
+<meta property="og:description" content="{{ og_description }}">
+<meta property="og:url" content="{{ site_url }}{{ path }}">
+<meta property="og:image" content="{{ site_url }}{{ og_image }}">
+<meta property="og:locale" content="en_AU">
+{{ head }}
+<link rel="stylesheet" href="css/styles.css?v={{ css_version }}">
+</head>
+<body{{ body_attrs }}>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+{{> icon-sprite.html }}
+
+{{> header.html }}
+
+<main id="main">
+{{ content }}
+</main>
+
+{{> footer.html }}
+
+{{> mobile-bar.html }}
+
+{{ schema }}
+<script src="js/main.js" defer></script>
+</body>
+</html>
