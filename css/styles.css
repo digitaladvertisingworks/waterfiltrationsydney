@@ -1155,3 +1155,9 @@ tbody th { font-weight: 600; color: var(--navy); }
    under the heading rather than as part of the grid. */
 .prose .table-wrap { margin: 1.25rem 0 1rem; }
 .prose .table-wrap caption { caption-side: top; }
+
+/* Links inside the dark CTA band inherit var(--brand-dark), which is close to
+   unreadable on the blue gradient. Scoped to paragraphs so .btn--white, whose
+   text is deliberately dark on white, is untouched. */
+.cta-band--dark p a { color: #fff; text-decoration: underline; text-underline-offset: 2px; }
+.cta-band--dark p a:hover { color: rgba(255, 255, 255, .82); }
