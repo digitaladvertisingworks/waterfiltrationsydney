@@ -1,4 +1,4 @@
-/* Safe Water Filtration — minimal vanilla JS
+/* Safe Water Filtration: minimal vanilla JS
    1. Mobile navigation toggle
    2. Sticky-header background state
    3. Quote form: validation + submission
@@ -102,7 +102,7 @@ const FALLBACK_EMAIL = 'quote@waterfiltration.sydney';
 
     var data = new FormData(form);
 
-    /* No endpoint configured — hand the enquiry to the visitor's mail app. */
+    /* No endpoint configured: hand the enquiry to the visitor's mail app. */
     if (!FORM_ENDPOINT) {
       var lines = [];
       data.forEach(function (value, key) {
@@ -124,7 +124,7 @@ const FALLBACK_EMAIL = 'quote@waterfiltration.sydney';
         form.reset();
         /* Send the visitor to the thank-you page. It is the same destination
            Web3Forms uses for the no-JS fallback (the hidden "redirect" field),
-           so both paths end on one URL — which is what a conversion goal in
+           so both paths end on one URL: which is what a conversion goal in
            GA4 or Google Ads can be pointed at. */
         window.location.assign(THANK_YOU_URL);
       })

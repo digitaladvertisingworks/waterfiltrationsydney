@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Safe Water Filtration — Sydney
+   Safe Water Filtration: Sydney
    Shared stylesheet. Mobile-first, plain CSS, no frameworks.
    1. Tokens        5. Header / nav
    2. Base          6. Sections & components
@@ -328,7 +328,7 @@ summary:focus-visible {
   content: ""; position: absolute; inset: 0; z-index: 1;
   /* Dark scrim behind the copy. Holds the photograph's detail instead of
      bleaching it, and carries white text. Lightest weight that clears AA on
-     the real glyph pixels — measured, not guessed. */
+     the real glyph pixels: measured, not guessed. */
   background: linear-gradient(96deg,
     rgba(8, 28, 48, 0.28) 0%,
     rgba(8, 28, 48, 0.64) 30%,
@@ -353,7 +353,7 @@ summary:focus-visible {
     gap: 1.5rem clamp(2rem, 4vw, 3.25rem);
     align-items: start;
   }
-  /* Every item placed explicitly — auto-placement would push rows around. */
+  /* Every item placed explicitly: auto-placement would push rows around. */
   .hero__form { grid-column: 1; grid-row: 1 / span 2; align-self: start; }
   .hero__text { grid-column: 2; grid-row: 1; max-width: 34rem; }
   .hero-proof { grid-column: 2; grid-row: 2; justify-self: start; max-width: 24rem; margin-top: 0; }
@@ -380,7 +380,7 @@ summary:focus-visible {
 .hero__text > p:not(.hero-badge) { color: #33475c; font-size: 1.02rem; }
 
 /* Above 900px the copy sits on the dark scrim, so it flips to light. Declared
-   after the base colours — an earlier media block loses on source order. */
+   after the base colours: an earlier media block loses on source order. */
 @media (min-width: 900px) {
   .hero h1 { color: #fff; }
   .hero__text > p:not(.hero-badge) { color: #edf3f8; }
@@ -794,7 +794,7 @@ tbody th { font-weight: 600; color: var(--navy); }
 /* Proof bar directly under the hero */
 .proof-bar { background: #fff; border-block: 1px solid var(--line); padding-block: 1.6rem; }
 
-/* Suburb chips — replaces long service-area card lists */
+/* Suburb chips: replaces long service-area card lists */
 .chips { display: flex; flex-wrap: wrap; justify-content: center; gap: .5rem; list-style: none; margin: 0; padding: 0; }
 .chips li { margin: 0; }
 .chips span { display: inline-block; padding: .45rem .95rem; background: #fff; border: 1px solid var(--line); border-radius: var(--pill); font-size: .85rem; font-weight: 600; color: var(--navy); }
@@ -807,7 +807,7 @@ tbody th { font-weight: 600; color: var(--navy); }
 .pick .tick-list li { font-size: .9rem; }
 
 /* 10. MARKETING BLOCKS ==================================================== */
-/* All reuse the existing tokens — no new colours, fonts or radii. */
+/* All reuse the existing tokens: no new colours, fonts or radii. */
 
 /* Problem / pain recognition */
 .pain .card__icon { background: #fdeeea; }
@@ -843,7 +843,7 @@ tbody th { font-weight: 600; color: var(--navy); }
 .gallery img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--radius); box-shadow: var(--shadow-sm); }
 .gallery figcaption { margin-top: .6rem; font-size: .88rem; color: var(--muted); }
 
-/* Testimonial cards — fill with real, attributed reviews only */
+/* Testimonial cards: fill with real, attributed reviews only */
 .quote {
   display: flex; flex-direction: column; gap: .9rem;
   padding: clamp(1.35rem, 2.5vw, 1.75rem);
@@ -887,7 +887,7 @@ tbody th { font-weight: 600; color: var(--navy); }
 .hero-proof .more { display: inline-flex; align-items: center; min-height: 24px; margin-top: .6rem; font-size: .86rem; font-weight: 600; }
 @media (max-width: 899px) { .hero-proof { max-width: none; } }
 
-/* Credential bar under the hero — logos at a size you can actually read */
+/* Credential bar under the hero: logos at a size you can actually read */
 .proof-logos {
   display: flex; flex-wrap: wrap; align-items: center; justify-content: center;
   gap: 1rem 1.5rem; list-style: none; margin: 0; padding: 0;
@@ -922,19 +922,52 @@ tbody th { font-weight: 600; color: var(--navy); }
   .proof-logos li:nth-child(3) img { height: 60px; }
 }
 
-/* Legal links row in the footer, above the copyright line. */
-.footer-legal{margin-top:1.5rem}
-.footer-list--inline{display:flex;flex-wrap:wrap;gap:.4rem 1.25rem}
-.footer-list--inline li{margin:0}
-.footer-more{margin-top:1.5rem}
+/* Footer secondary navigation: the informational row and the legal row.
+   Both sit between the compliance band and the copyright bar, so they share
+   one separator and one rhythm rather than each carrying its own margin. */
+.footer-nav {
+  margin-top: 1.75rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(18, 60, 104, .13);
+}
+.footer-list--inline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem 1.6rem;
+  line-height: 1.4;
+}
+.footer-list--inline li { margin: 0; }
+.footer-list--inline a { display: inline; }
 
-/* Footer compliance band — licence, entity and insurance details. */
-.footer-compliance { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(76,95,112,.2); }
-.compliance-grid { display: grid; gap: 1rem 2rem; margin: 0; grid-template-columns: 1fr; }
+/* The legal row is secondary to the row above it. */
+.footer-legal { margin-top: 1rem; }
+.footer-legal a { font-size: .86rem; color: var(--muted); }
+.footer-legal a:hover { color: var(--brand); }
+
+/* Footer compliance band: licence, entity and insurance details. */
+.footer-compliance {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(18, 60, 104, .13);
+}
+.footer-compliance h2 { margin-bottom: 1.1rem; }
+.compliance-grid {
+  display: grid;
+  gap: 1.15rem 2rem;
+  margin: 0;
+  grid-template-columns: 1fr;
+}
 @media (min-width: 560px) { .compliance-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (min-width: 900px) { .compliance-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
-.compliance-grid dt { font-size: .78rem; letter-spacing: .02em; text-transform: uppercase; color: #6b7c8c; margin-bottom: .2rem; }
-.compliance-grid dd { margin: 0; font-size: .92rem; color: var(--navy); }
+.compliance-grid dt {
+  font-size: .74rem;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: #6b7c8c;
+  margin-bottom: .3rem;
+  line-height: 1.35;
+}
+.compliance-grid dd { margin: 0; font-size: .92rem; line-height: 1.45; color: var(--navy); }
 .compliance-grid a { color: var(--brand); text-decoration: none; }
 .compliance-grid a:hover { text-decoration: underline; }
 
