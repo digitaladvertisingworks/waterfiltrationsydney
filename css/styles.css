@@ -996,10 +996,28 @@ tbody th { font-weight: 600; color: var(--navy); }
    tables and data grids at 74ch, which is what broke the transparency page: a
    grid asking for four columns had about 630px to do it in. Text stays at a
    readable measure; tables and fact grids opt out and use the full container. */
-.prose { max-width: none; }
-.prose > * { max-width: 74ch; }
+/* Two false starts are worth recording here.
+
+   .prose sits on the same element as .container. Setting `max-width: none` on
+   it cancelled the container's 1180px cap and auto margins, because both are
+   single-class selectors and .prose comes later, so the page collapsed to the
+   left edge of the viewport.
+
+   Capping each child at 74ch and centring it went ragged instead: ch is
+   relative to the element's own font-size, so 74ch on the h1 is far wider than
+   74ch on a paragraph, and centring boxes of different widths staggers their
+   left edges.
+
+   The fix is a three-column grid. Text sits in a centred column of a single
+   fixed width whatever its font-size, and tables and fact grids span the lot.
+   .prose sets no max-width, so the container's still applies. */
+.prose {
+  display: grid;
+  grid-template-columns: 1fr min(74ch, 100%) 1fr;
+}
+.prose > * { grid-column: 2; min-width: 0; }
 .prose > .table-wrap,
-.prose > .facts-grid { max-width: 100%; }
+.prose > .facts-grid { grid-column: 1 / -1; }
 .prose h1 { margin-bottom: 1.25rem; }
 .prose h2 { margin-top: 2.5rem; margin-bottom: .85rem; font-size: clamp(1.3rem, 2.4vw, 1.6rem); }
 .prose h3 { margin-top: 1.75rem; margin-bottom: .5rem; font-size: 1.12rem; }
@@ -1106,16 +1124,22 @@ tbody th { font-weight: 600; color: var(--navy); }
 .facts-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1px;
+  gap: 0;
   margin: 1.5rem 0 2rem;
-  background: var(--line);
+  background: #fff;
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
   overflow: hidden;
 }
 @media (min-width: 560px) { .facts-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (min-width: 900px) { .facts-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
-.facts-grid > div { background: #fff; padding: .95rem 1.15rem; }
+/* Inset shadow rather than gap-over-background, so a row that does not fill
+   every column leaves white space instead of a stray coloured cell. */
+.facts-grid > div {
+  background: #fff;
+  padding: .95rem 1.15rem;
+  box-shadow: inset -1px -1px 0 var(--line);
+}
 .facts-grid dt {
   font-size: .74rem;
   letter-spacing: .04em;
