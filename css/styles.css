@@ -927,3 +927,13 @@ tbody th { font-weight: 600; color: var(--navy); }
 .footer-list--inline{display:flex;flex-wrap:wrap;gap:.4rem 1.25rem}
 .footer-list--inline li{margin:0}
 .footer-more{margin-top:1.5rem}
+
+/* Footer compliance band — licence, entity and insurance details. */
+.footer-compliance { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(76,95,112,.2); }
+.compliance-grid { display: grid; gap: 1rem 2rem; margin: 0; grid-template-columns: 1fr; }
+@media (min-width: 560px) { .compliance-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 900px) { .compliance-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.compliance-grid dt { font-size: .78rem; letter-spacing: .02em; text-transform: uppercase; color: #6b7c8c; margin-bottom: .2rem; }
+.compliance-grid dd { margin: 0; font-size: .92rem; color: var(--navy); }
+.compliance-grid a { color: var(--brand); text-decoration: none; }
+.compliance-grid a:hover { text-decoration: underline; }
