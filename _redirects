@@ -71,3 +71,7 @@
 /website-disclaimer.html           /website-disclaimer                301
 /your-account/                     /your-account                      301
 /your-account.html                 /your-account                      301
+
+# 24 hour emergency page.
+/emergency-water-filter-installation/  /emergency-water-filter-installation   301
+/emergency-water-filter-installation.html /emergency-water-filter-installation   301
