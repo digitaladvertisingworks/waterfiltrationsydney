@@ -32,6 +32,10 @@
 /services/          /services       301
 /service-areas/     /service-areas  301
 /contact-us/        /contact-us     301
+/thank-you/         /thank-you      301
 
 # The generated 404 document is noindex; keep a single address for it.
 /404.html           /404            301
+
+# The thank-you page has one canonical address.
+/thank-you.html     /thank-you      301

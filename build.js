@@ -106,7 +106,7 @@ const SECRET_PATTERNS = [
   { name: 'assigned secret', re: /\b(?:api[_-]?secret|client[_-]?secret|password|auth[_-]?token)\s*[:=]\s*["'][^"']{8,}["']/i }
 ];
 const ALLOWED_PUBLIC_KEYS = [
-  '0d4f5414-2830-4d0d-855e-94356e8ebe40' /* Web3Forms public access key */
+  '2c39a7ca-14ce-46fc-9432-b360c3c07b01' /* Web3Forms public access key */
 ];
 
 function scanForSecrets(file, html) {

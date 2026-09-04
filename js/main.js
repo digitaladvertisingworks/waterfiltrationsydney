@@ -8,6 +8,10 @@
    opening the visitor's email client with the enquiry pre-filled, so the
    site still works on a plain static host.                                */
 const FORM_ENDPOINT = 'https://api.web3forms.com/submit';
+
+/* Where a successful submission lands. Keep this in step with the hidden
+   "redirect" input in the form markup. */
+const THANK_YOU_URL = '/thank-you';
 const FALLBACK_EMAIL = 'quote@waterfiltration.sydney';
 
 (function () {
@@ -118,7 +122,11 @@ const FALLBACK_EMAIL = 'quote@waterfiltration.sydney';
       .then(function (res) {
         if (!res.ok) throw new Error('Request failed');
         form.reset();
-        showStatus('Thanks — your quote request has been sent. We will be in touch shortly. For anything urgent, call 0421 601 540.', true);
+        /* Send the visitor to the thank-you page. It is the same destination
+           Web3Forms uses for the no-JS fallback (the hidden "redirect" field),
+           so both paths end on one URL — which is what a conversion goal in
+           GA4 or Google Ads can be pointed at. */
+        window.location.assign(THANK_YOU_URL);
       })
       .catch(function () {
         showStatus('Sorry, that did not send. Please call 0421 601 540 or email ' + FALLBACK_EMAIL + '.', false);

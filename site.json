@@ -3,6 +3,7 @@
   "site_url": "https://waterfiltration.sydney",
   "theme_color": "#1571c4",
   "css_version": "20260903-1",
+  "js_version": "20260904-1",
   "og_image": "/images/safe-water-filtration-share.jpg",
   "home": "/",
   "body_attrs": ""
