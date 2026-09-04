@@ -130,6 +130,11 @@ function buildPage(file, site, base) {
     content: split.content.replace(/^\r?\n+/, '').replace(/\s+$/, '')
   });
   if (!vars.title) throw new Error(file + ': front matter needs a title');
+  /* Without `path`, {{ path }} renders empty and the canonical collapses to the
+     bare origin, which tells Google this page is the home page. It has slipped
+     through twice, so the build now refuses it rather than relying on review. */
+  if (!vars.path) throw new Error(file + ': front matter needs a path, e.g. path: /about-us');
+  if (!/^\//.test(vars.path)) throw new Error(file + ': path must start with a slash');
   if (vars.og_title === undefined) vars.og_title = vars.title;
   if (vars.og_description === undefined) vars.og_description = vars.description;
   return render(includePartials(base, []), vars);

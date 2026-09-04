@@ -80,3 +80,8 @@
 /transparency/                         /transparency                          301
 /transparency.html                     /transparency                          301
 /resources                             /transparency                          301
+
+# About page.
+/about-us/                             /about-us                              301
+/about-us.html                         /about-us                              301
+/about                                 /about-us                              301
