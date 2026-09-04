@@ -983,3 +983,67 @@ tbody th { font-weight: 600; color: var(--navy); }
 .prose li::marker { color: var(--brand); }
 .prose a { color: var(--brand); }
 .prose > p:first-of-type { font-size: 1.05rem; color: var(--muted); }
+
+/* --- Compliance / trust bar -------------------------------------------------
+   Sits between the fixed header and the page content on every page. It owns the
+   clearance for the fixed header, which the first .section on inner pages did
+   not reliably provide: section padding bottoms out at 3.25rem on small
+   viewports, which is less than the header is tall, so headings were sliding
+   under it. */
+.trust-bar {
+  padding-top: calc(4.6rem + env(safe-area-inset-top, 0px));
+  padding-bottom: .7rem;
+  background: linear-gradient(180deg, var(--bg-soft) 0%, #fff 100%);
+  border-bottom: 1px solid var(--line);
+}
+.trust-bar__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem 1.6rem;
+}
+.trust-bar__list li {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  margin: 0;
+  font-size: .8rem;
+  line-height: 1.3;
+  color: var(--muted);
+  white-space: nowrap;
+}
+.trust-bar__list strong { color: var(--navy); font-weight: 600; }
+.trust-bar__list .icon { width: 15px; height: 15px; flex: none; fill: var(--ok); }
+.trust-bar__list a {
+  margin-left: .4rem;
+  color: var(--brand);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.trust-bar__list a:hover { color: var(--navy); }
+
+/* Below the desktop nav breakpoint the row would stack four deep and push the
+   hero off screen, so it scrolls sideways instead and keeps a fixed height. */
+@media (max-width: 899px) {
+  .trust-bar { padding-top: calc(4.1rem + env(safe-area-inset-top, 0px)); }
+  .trust-bar .container { padding-inline: 0; }
+  .trust-bar__list {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    padding-inline: var(--gutter);
+    gap: 1.15rem;
+  }
+  .trust-bar__list::-webkit-scrollbar { display: none; }
+}
+
+/* The bar now provides the fixed-header clearance the hero used to carry. */
+.hero { padding-top: clamp(1.75rem, 3.5vw, 2.75rem); }
+@media (max-width: 899px) { .hero { padding-top: clamp(1.25rem, 3vw, 2rem); } }
