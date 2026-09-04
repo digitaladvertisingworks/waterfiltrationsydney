@@ -990,8 +990,16 @@ tbody th { font-weight: 600; color: var(--navy); }
 .compliance-grid a:hover { text-decoration: underline; }
 
 /* Long-form text pages (legal, FAQs, support). The 1180px container is far
-   too wide to read a paragraph across, so these get a prose measure. */
-.prose { max-width: 74ch; }
+   too wide to read a paragraph across, so these get a prose measure.
+
+   The cap is on the children, not the wrapper. Capping the wrapper also traps
+   tables and data grids at 74ch, which is what broke the transparency page: a
+   grid asking for four columns had about 630px to do it in. Text stays at a
+   readable measure; tables and fact grids opt out and use the full container. */
+.prose { max-width: none; }
+.prose > * { max-width: 74ch; }
+.prose > .table-wrap,
+.prose > .facts-grid { max-width: 100%; }
 .prose h1 { margin-bottom: 1.25rem; }
 .prose h2 { margin-top: 2.5rem; margin-bottom: .85rem; font-size: clamp(1.3rem, 2.4vw, 1.6rem); }
 .prose h3 { margin-top: 1.75rem; margin-bottom: .5rem; font-size: 1.12rem; }
@@ -1087,3 +1095,39 @@ tbody th { font-weight: 600; color: var(--navy); }
 /* The bar now provides the fixed-header clearance the hero used to carry. */
 .hero { padding-top: clamp(1.75rem, 3.5vw, 2.75rem); }
 @media (max-width: 899px) { .hero { padding-top: clamp(1.25rem, 3vw, 2rem); } }
+
+
+/* --- In-page fact grid --------------------------------------------------
+   The transparency page previously borrowed .compliance-grid from the footer.
+   That coupled a content page to footer chrome, and the footer's four-column
+   breakpoint made no sense inside a prose column. This is the page-level
+   version: hairline-separated cells on white, three across at most so values
+   like a full service-area sentence have room to sit on one or two lines. */
+.facts-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1px;
+  margin: 1.5rem 0 2rem;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+@media (min-width: 560px) { .facts-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 900px) { .facts-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.facts-grid > div { background: #fff; padding: .95rem 1.15rem; }
+.facts-grid dt {
+  font-size: .74rem;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: #6b7c8c;
+  margin-bottom: .35rem;
+  line-height: 1.35;
+}
+.facts-grid dd { margin: 0; font-size: 1rem; line-height: 1.5; color: var(--navy); font-weight: 600; }
+.facts-grid a { color: var(--brand); font-weight: 600; }
+
+/* Tables on prose pages: full container width, and the caption reads as a note
+   under the heading rather than as part of the grid. */
+.prose .table-wrap { margin: 1.25rem 0 1rem; }
+.prose .table-wrap caption { caption-side: top; }
