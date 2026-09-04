@@ -921,3 +921,8 @@ tbody th { font-weight: 600; color: var(--navy); }
   .proof-logos img,
   .proof-logos li:nth-child(3) img { height: 60px; }
 }
+
+/* Legal links row in the footer, above the copyright line. */
+.footer-legal{margin-top:1.5rem}
+.footer-list--inline{display:flex;flex-wrap:wrap;gap:.4rem 1.25rem}
+.footer-list--inline li{margin:0}

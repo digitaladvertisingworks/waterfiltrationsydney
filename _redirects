@@ -39,3 +39,15 @@
 
 # The thank-you page has one canonical address.
 /thank-you.html     /thank-you      301
+
+# Legal pages — one canonical address each.
+/privacy-policy/            /privacy-policy             301
+/privacy-policy.html        /privacy-policy             301
+/terms-and-conditions/      /terms-and-conditions       301
+/terms-and-conditions.html  /terms-and-conditions       301
+/terms-of-sale/             /terms-of-sale              301
+/terms-of-sale.html         /terms-of-sale              301
+/returns-and-refunds-policy/ /returns-and-refunds-policy 301
+/returns-and-refunds-policy.html /returns-and-refunds-policy 301
+/shipping-policy/           /shipping-policy            301
+/shipping-policy.html       /shipping-policy            301
