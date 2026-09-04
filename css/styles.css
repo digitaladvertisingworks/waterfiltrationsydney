@@ -937,3 +937,16 @@ tbody th { font-weight: 600; color: var(--navy); }
 .compliance-grid dd { margin: 0; font-size: .92rem; color: var(--navy); }
 .compliance-grid a { color: var(--brand); text-decoration: none; }
 .compliance-grid a:hover { text-decoration: underline; }
+
+/* Long-form text pages (legal, FAQs, support). The 1180px container is far
+   too wide to read a paragraph across, so these get a prose measure. */
+.prose { max-width: 74ch; }
+.prose h1 { margin-bottom: 1.25rem; }
+.prose h2 { margin-top: 2.5rem; margin-bottom: .85rem; font-size: clamp(1.3rem, 2.4vw, 1.6rem); }
+.prose h3 { margin-top: 1.75rem; margin-bottom: .5rem; font-size: 1.08rem; }
+.prose p { margin-bottom: 1rem; line-height: 1.7; }
+.prose ul, .prose ol { margin: 0 0 1.25rem; padding-left: 1.35rem; }
+.prose li { margin-bottom: .5rem; line-height: 1.65; }
+.prose li::marker { color: var(--brand); }
+.prose a { color: var(--brand); }
+.prose > p:first-of-type { font-size: 1.05rem; color: var(--muted); }
