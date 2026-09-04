@@ -1,4 +1,4 @@
-/* Safe Water Filtration: minimal vanilla JS
+/* Water Filtration Sydney: minimal vanilla JS
    1. Mobile navigation toggle
    2. Sticky-header background state
    3. Quote form: validation + submission

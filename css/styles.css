@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Safe Water Filtration: Sydney
+   Water Filtration Sydney: Sydney
    Shared stylesheet. Mobile-first, plain CSS, no frameworks.
    1. Tokens        5. Header / nav
    2. Base          6. Sections & components
@@ -9,7 +9,7 @@
 
 /* 1. TOKENS ============================================================== */
 :root {
-  /* Brand palette taken from the Safe Water Filtration logo and site */
+  /* Brand palette taken from the Water Filtration Sydney logo and site */
   --navy: #123c68;
   --navy-deep: #0c2c4d;
   --brand: #1571c4;
