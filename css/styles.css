@@ -1068,13 +1068,20 @@ tbody th { font-weight: 600; color: var(--navy); }
   .trust-bar__list li:nth-child(n+4) { display: none; }
 }
 
-/* Narrow phones: the licence, which is the only claim a visitor can verify,
-   and the insurance figure. Two items, one line, nothing clipped. */
+/* Narrow phones: the licence alone, which is the only claim a visitor can
+   actually verify. "NSW Licensed Water Filter Plumber No. 358626C  Verify" is
+   about 320px of text, which will not sit on one line beside anything else on a
+   360px screen, and the items are nowrap, so a second item would be clipped
+   rather than wrapped. Wrapping is allowed here so the label breaks cleanly over
+   two lines instead. The insurance figure stays in the footer compliance band. */
 @media (max-width: 559px) {
-  .trust-bar__list li:nth-child(n+3) { display: none; }
-  .trust-bar__list { gap: .35rem .9rem; }
-  .trust-bar__list li { font-size: .76rem; }
-  .trust-bar__list a { margin-left: .3rem; }
+  .trust-bar__list li:nth-child(n+2) { display: none; }
+  .trust-bar__list li {
+    font-size: .78rem;
+    white-space: normal;
+    text-align: center;
+  }
+  .trust-bar__list a { margin-left: .35rem; white-space: nowrap; }
 }
 
 /* The bar now provides the fixed-header clearance the hero used to carry. */
