@@ -75,3 +75,8 @@
 # 24 hour emergency page.
 /emergency-water-filter-installation/  /emergency-water-filter-installation   301
 /emergency-water-filter-installation.html /emergency-water-filter-installation   301
+
+# Transparency hub.
+/transparency/                         /transparency                          301
+/transparency.html                     /transparency                          301
+/resources                             /transparency                          301
