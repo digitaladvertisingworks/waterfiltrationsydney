@@ -1,11 +1,23 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "waterfiltrationsydney",
+  // Two Cloudflare accounts are available to this login; pin the one that owns
+  // the Worker so non-interactive deploys do not have to guess.
+  "account_id": "63864e0807a2a62d44577243a33e2526",
   "compatibility_date": "2026-08-31",
   "observability": { "enabled": true },
   "assets": {
     // The built HTML lives at the repo root; .assetsignore keeps sources,
     // node_modules and source material out of the upload.
-    "directory": "."
+    "directory": ".",
+
+    // Serve /services from services.html and keep the canonical URL
+    // extensionless with no trailing slash. _redirects turns the framework's
+    // 307s into 301s for the .html and trailing-slash forms.
+    "html_handling": "drop-trailing-slash",
+
+    // Unknown paths render the built 404.html (noindex) with a 404 status,
+    // instead of the current empty body.
+    "not_found_handling": "404-page"
   }
 }

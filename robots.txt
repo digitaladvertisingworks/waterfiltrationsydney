@@ -1,6 +1,40 @@
+# https://waterfiltration.sydney/robots.txt
+# Static site on Cloudflare Workers static assets. No CMS, no admin area.
+
 User-agent: *
 Allow: /
+
+# Build sources. These are excluded from the upload (.assetsignore) and 301 to
+# the homepage (_redirects); listed here so crawlers never queue them at all.
 Disallow: /pages/
 Disallow: /templates/
 
-Sitemap: https://safewaterfiltration.com.au/sitemap.xml
+# Everything that renders the site — CSS, JS, images, icons — is crawlable.
+# No Disallow rule covers /css/, /js/, /images/ or /img/.
+
+# AI and search crawlers: explicitly welcome.
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+Sitemap: https://waterfiltration.sydney/sitemap.xml

@@ -9,3 +9,6 @@ Landing Page Content Outline  Framework safewaterfiltration.xml
 # Deploy tooling
 node_modules/
 .wrangler/
+
+# Pre-change backup of SEO/config files
+.seo-backup-20260904/

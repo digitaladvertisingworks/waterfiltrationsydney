@@ -35,3 +35,6 @@ CLAUDE.md
 .git
 .gitignore
 .assetsignore
+
+# Pre-change backup of SEO/config files (not part of the public site)
+.seo-backup-20260904

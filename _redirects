@@ -1,3 +1,7 @@
+# Cloudflare Workers static assets — _redirects. Rules run BEFORE asset serving.
+# Max 2100 rules; first match wins. Apache .htaccess is NOT used on this host.
+
+# --- PRESERVED (was already here) --------------------------------------------
 # Clean URLs. Workers static assets already serves /services from services.html
 # and 307s the .html form; these rules make that a permanent 301 instead, so
 # any link or index entry pointing at the old .html URL consolidates properly.
@@ -6,6 +10,7 @@
 /service-areas.html /service-areas  301
 /contact-us.html    /contact-us     301
 
+# --- PRESERVED (was already here) --------------------------------------------
 # Source paths are not part of the public site. Redirects run before assets, so
 # these can never be fetched even if a file ends up in the upload.
 # (.assetsignore keeps them out of it as well.)
@@ -16,3 +21,17 @@
 /build.js           /  301
 /package.json       /  301
 /wrangler.jsonc     /  301
+
+# --- NEW ---------------------------------------------------------------------
+# /index.htm was a 404. Send it to the canonical homepage like /index.html.
+/index.htm          /               301
+
+# Trailing-slash variants. Workers static assets answers these with a 307;
+# these make it a permanent 301 so link equity consolidates on the no-slash form.
+# The root "/" is left alone — it is the canonical homepage URL.
+/services/          /services       301
+/service-areas/     /service-areas  301
+/contact-us/        /contact-us     301
+
+# The generated 404 document is noindex; keep a single address for it.
+/404.html           /404            301
