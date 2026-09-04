@@ -1,20 +1,9 @@
-# https://waterfiltration.sydney/robots.txt
-# Static site on Cloudflare Workers static assets. No CMS, no admin area.
-# Kept to plain ASCII: robots.txt is served as text/plain and clients that
-# ignore the charset will mangle anything outside it.
-
 User-agent: *
 Allow: /
 
-# Build sources. These are excluded from the upload (.assetsignore) and 301 to
-# the homepage (_redirects); listed here so crawlers never queue them at all.
 Disallow: /pages/
 Disallow: /templates/
 
-# Everything that renders the site (CSS, JS, images, icons) is crawlable.
-# No Disallow rule covers /css/, /js/, /images/ or /img/.
-
-# AI and search crawlers: explicitly welcome.
 User-agent: Googlebot
 Allow: /
 

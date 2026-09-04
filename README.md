@@ -135,6 +135,10 @@ or JS-disabled visitors to miss. Built pages must live at the root so relative `
 They are excluded from the deploy entirely by `.assetsignore`, so they are never uploaded;
 `robots.txt` and `_redirects` cover them as well, in case the deploy config changes.
 
+`robots.txt` deliberately carries no comments. It is a public file read by every
+crawler and scanner, so it should not describe the hosting platform, the build
+layout or which config files exist. Keep the reasoning here, not in the file.
+
 ### Adding a page
 
 Create `pages/about.html`:
