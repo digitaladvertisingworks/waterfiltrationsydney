@@ -926,3 +926,4 @@ tbody th { font-weight: 600; color: var(--navy); }
 .footer-legal{margin-top:1.5rem}
 .footer-list--inline{display:flex;flex-wrap:wrap;gap:.4rem 1.25rem}
 .footer-list--inline li{margin:0}
+.footer-more{margin-top:1.5rem}

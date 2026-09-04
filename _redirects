@@ -51,3 +51,23 @@
 /returns-and-refunds-policy.html /returns-and-refunds-policy 301
 /shipping-policy/           /shipping-policy            301
 /shipping-policy.html       /shipping-policy            301
+
+# Support, compliance and information pages - one canonical address each.
+/faqs/                             /faqs                              301
+/faqs.html                         /faqs                              301
+/help-and-support/                 /help-and-support                  301
+/help-and-support.html             /help-and-support                  301
+/customer-services/                /customer-services                 301
+/customer-services.html            /customer-services                 301
+/applications-and-approvals/       /applications-and-approvals        301
+/applications-and-approvals.html   /applications-and-approvals        301
+/complaints-and-feedback/          /complaints-and-feedback           301
+/complaints-and-feedback.html      /complaints-and-feedback           301
+/careers/                          /careers                           301
+/careers.html                      /careers                           301
+/acknowledgement-of-country/       /acknowledgement-of-country        301
+/acknowledgement-of-country.html   /acknowledgement-of-country        301
+/website-disclaimer/               /website-disclaimer                301
+/website-disclaimer.html           /website-disclaimer                301
+/your-account/                     /your-account                      301
+/your-account.html                 /your-account                      301
