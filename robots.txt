@@ -1,5 +1,7 @@
 # https://waterfiltration.sydney/robots.txt
 # Static site on Cloudflare Workers static assets. No CMS, no admin area.
+# Kept to plain ASCII: robots.txt is served as text/plain and clients that
+# ignore the charset will mangle anything outside it.
 
 User-agent: *
 Allow: /
@@ -9,11 +11,14 @@ Allow: /
 Disallow: /pages/
 Disallow: /templates/
 
-# Everything that renders the site — CSS, JS, images, icons — is crawlable.
+# Everything that renders the site (CSS, JS, images, icons) is crawlable.
 # No Disallow rule covers /css/, /js/, /images/ or /img/.
 
 # AI and search crawlers: explicitly welcome.
 User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
 Allow: /
 
 User-agent: Bingbot
@@ -34,7 +39,16 @@ Allow: /
 User-agent: ClaudeBot
 Allow: /
 
+User-agent: Claude-SearchBot
+Allow: /
+
 User-agent: PerplexityBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
 Allow: /
 
 Sitemap: https://waterfiltration.sydney/sitemap.xml
