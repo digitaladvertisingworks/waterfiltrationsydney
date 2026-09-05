@@ -919,7 +919,7 @@ tbody th { font-weight: 600; color: var(--navy); }
   border-radius: var(--radius);
 }
 .proof-logos img { height: 78px; width: auto; }
-.proof-logos li:nth-child(3) img { height: 87px; }
+.proof-logos li.sq img { height: 87px; }   /* square 1:1 badges read small at 78px */
 
 .proof-chips {
   display: flex; flex-wrap: wrap; justify-content: center;
