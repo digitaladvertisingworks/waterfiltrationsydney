@@ -44,3 +44,9 @@
 /sitemap.xml
   Content-Type: application/xml; charset=utf-8
   Cache-Control: public, max-age=3600
+
+# The entity fragment carries no <head>, so noindex is sent as a header instead
+# of a meta tag. It is a data fragment, not a page that should rank.
+/business-info
+  X-Robots-Tag: noindex, follow
+  Content-Type: text/html; charset=utf-8
