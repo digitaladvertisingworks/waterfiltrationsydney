@@ -1266,3 +1266,8 @@ tbody th { font-weight: 600; color: var(--navy); }
   .marquee.is-scrolling { overflow-x: auto; -webkit-mask-image: none; mask-image: none; }
   .marquee.is-scrolling .proof-logos { animation: none; }
 }
+
+/* Certification marks under the installation quality section. Taller than the
+   accreditation badges because AS 3498 is a narrow portrait mark whose standard
+   numbers are unreadable at 78px. */
+.proof-logos--cert img { height: 92px; }
