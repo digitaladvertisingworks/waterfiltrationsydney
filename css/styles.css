@@ -1231,3 +1231,38 @@ tbody th { font-weight: 600; color: var(--navy); }
   text-transform: uppercase;
   color: #5a6875;
 }
+
+/* --- Logo marquee ---------------------------------------------------------
+   Progressive enhancement over .proof-logos. With no JS the row stays exactly
+   as it was: centred, wrapped, static. main.js adds .is-scrolling only once it
+   has cloned the badges and measured the shift distance, so a half-built
+   marquee never renders. */
+.marquee { position: relative; }
+.marquee.is-scrolling {
+  overflow: hidden;
+  /* Mask rather than gradient overlays, so it works on any section background. */
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 3.5rem, #000 calc(100% - 3.5rem), transparent);
+          mask-image: linear-gradient(90deg, transparent, #000 3.5rem, #000 calc(100% - 3.5rem), transparent);
+}
+.marquee.is-scrolling .proof-logos {
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  width: max-content;
+  animation: marquee-scroll var(--marquee-duration, 40s) linear infinite;
+  will-change: transform;
+}
+/* Readable on demand: stop for a pointer, and for anyone tabbing through. */
+.marquee.is-scrolling:hover .proof-logos,
+.marquee.is-scrolling:focus-within .proof-logos { animation-play-state: paused; }
+
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(calc(-1 * var(--marquee-shift, 50%))); }
+}
+
+/* No motion: never animate. The row scrolls by hand instead, so nothing is
+   unreachable on a narrow screen. */
+@media (prefers-reduced-motion: reduce) {
+  .marquee.is-scrolling { overflow-x: auto; -webkit-mask-image: none; mask-image: none; }
+  .marquee.is-scrolling .proof-logos { animation: none; }
+}

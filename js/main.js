@@ -136,3 +136,78 @@ const FALLBACK_EMAIL = 'quote@waterfiltration.sydney';
       });
   });
 })();
+
+/* ---------------------------------------------------------------------------
+   Logo marquee.
+
+   The badge row is authored once, statically. This clones it so the loop is
+   seamless, then shifts the track by exactly one set width plus one gap. Doing
+   the maths in pixels rather than translateX(-50%) avoids the half-gap drift
+   you get when a duplicated flex row is shifted by a percentage.
+
+   It only engages when the badges actually overflow, so on a wide desktop the
+   row stays centred and still, and it bails out entirely if the visitor has
+   asked for reduced motion.
+   ------------------------------------------------------------------------- */
+(function () {
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var SPEED = 45; /* pixels per second */
+
+  function setup(box) {
+    var list = box.querySelector('.proof-logos');
+    if (!list) return;
+
+    /* Reset so a resize re-measures against the original set, not a clone. */
+    if (box.dataset.cloned === 'yes') {
+      var originals = list.querySelectorAll('[data-clone]');
+      for (var i = 0; i < originals.length; i++) originals[i].remove();
+      box.dataset.cloned = 'no';
+      box.classList.remove('is-scrolling');
+    }
+
+    if (reduce) return;
+
+    /* .proof-logos wraps by default, so it never overflows and scrollWidth is
+       useless as an overflow test. Measure the row unwrapped instead, then put
+       it back before deciding anything. */
+    var prevWrap = list.style.flexWrap;
+    var prevWidth = list.style.width;
+    list.style.flexWrap = 'nowrap';
+    list.style.width = 'max-content';
+    var natural = list.scrollWidth;
+    list.style.flexWrap = prevWrap;
+    list.style.width = prevWidth;
+
+    if (natural <= box.clientWidth) return;
+
+    var gap = parseFloat(getComputedStyle(list).columnGap) || 0;
+    var shift = natural + gap;
+
+    var items = list.children;
+    var count = items.length;
+    for (var j = 0; j < count; j++) {
+      var copy = items[j].cloneNode(true);
+      copy.setAttribute('aria-hidden', 'true');
+      copy.setAttribute('data-clone', '');
+      list.appendChild(copy);
+    }
+
+    box.style.setProperty('--marquee-shift', shift + 'px');
+    box.style.setProperty('--marquee-duration', (shift / SPEED).toFixed(2) + 's');
+    box.dataset.cloned = 'yes';
+    box.classList.add('is-scrolling');
+  }
+
+  function init() {
+    var boxes = document.querySelectorAll('[data-marquee]');
+    for (var i = 0; i < boxes.length; i++) setup(boxes[i]);
+  }
+
+  init();
+
+  var timer;
+  window.addEventListener('resize', function () {
+    clearTimeout(timer);
+    timer = setTimeout(init, 250);
+  });
+})();
