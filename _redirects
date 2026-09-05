@@ -85,3 +85,7 @@
 /about-us/                             /about-us                              301
 /about-us.html                         /about-us                              301
 /about                                 /about-us                              301
+
+# Machine-readable business record.
+/business-info.html                    /business-info                         301
+/business-info/                        /business-info                         301
