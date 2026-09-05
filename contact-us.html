@@ -3,10 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- Entity data resource hint, requested by the site owner. Note: crawlers do
-     not act on resource hints, and nothing on the page fetch()es this file, so
-     the browser discards it. Removing this line costs nothing in indexing. -->
-<link rel="preload" href="business-info.html" as="fetch" crossorigin="anonymous">
+<!-- Entity data resource hint, requested by the site owner. Points at the
+     canonical /business-info rather than business-info.html, because
+     html_handling strips the extension site-wide and the .html form 301s,
+     which would make the browser spend the preload on a redirect. Note that
+     crawlers do not act on resource hints and nothing here fetch()es the
+     file, so removing this line costs nothing in indexing. -->
+<link rel="preload" href="/business-info" as="fetch" crossorigin="anonymous">
 <title>Contact Us | Water Filtration Sydney</title>
 <meta name="description" content="Contact Water Filtration Sydney. Call 0421 601 540 or email quote@waterfiltration.sydney for water filter installation, servicing and filter replacement across Sydney Metro and Greater Sydney.">
 <link rel="canonical" href="https://waterfiltration.sydney/contact-us">
@@ -300,7 +303,7 @@
           <dd>Water Filtration Sydney</dd>
 
           <dt>Category</dt>
-          <dd>Plumber, Water Filtration Installer</dd>
+          <dd>Plumber, Water filter supplier, Water purification company, Water softening equipment supplier, Water treatment supplier, Water filtration installer</dd>
 
           <dt>Market</dt>
           <dd>Sydney &amp; New South Wales, Australia</dd>
