@@ -26,6 +26,23 @@
 
   gtag('config', 'AW-18441694143');
 </script>
+<!-- Event snippet for Request quote conversion page -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18441694143/sxQyCLqb3fIcEL_X19lE',
+      'value': 1.0,
+      'currency': 'AUD',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
 <link rel="stylesheet" href="css/styles.css?v=20260905-11">
 </head>
 <body>

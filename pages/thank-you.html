@@ -5,6 +5,9 @@ path: /thank-you
 ---
 <!-- @block head -->
 <meta name="robots" content="noindex, follow">
+<!-- Fire the Request quote conversion once, on the page every submit lands on
+     (the fetch path and the Web3Forms no-JS redirect both end here). -->
+<script>gtag_report_conversion();</script>
 <!-- @endblock -->
 <section class="section">
   <div class="container prose">

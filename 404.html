@@ -17,7 +17,6 @@
 <meta property="og:url" content="https://waterfiltration.sydney/404">
 <meta property="og:image" content="https://waterfiltration.sydney/images/safe-water-filtration-share.jpg">
 <meta property="og:locale" content="en_AU">
-<meta name="robots" content="noindex, follow">
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18441694143"></script>
 <script>
@@ -27,6 +26,24 @@
 
   gtag('config', 'AW-18441694143');
 </script>
+<!-- Event snippet for Request quote conversion page -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18441694143/sxQyCLqb3fIcEL_X19lE',
+      'value': 1.0,
+      'currency': 'AUD',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+<meta name="robots" content="noindex, follow">
 <link rel="stylesheet" href="css/styles.css?v=20260905-11">
 </head>
 <body>
