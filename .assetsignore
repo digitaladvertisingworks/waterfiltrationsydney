@@ -38,3 +38,6 @@ CLAUDE.md
 
 # Pre-change backup of SEO/config files (not part of the public site)
 .seo-backup-20260904
+
+# install.waterfiltration.sydney (Google Ads lander) — its own Worker, see install/
+install

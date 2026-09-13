@@ -4,6 +4,8 @@
   "description": "Static site for Safe Water Filtration — templates in templates/ + pages/, built by build.js",
   "scripts": {
     "build": "node build.js",
-    "check": "node build.js --check"
+    "check": "node build.js --check",
+    "build:install": "node build.js && node install/build.js",
+    "deploy:install": "npm run build:install && npx wrangler deploy -c install/wrangler.jsonc"
   }
 }

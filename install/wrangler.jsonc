@@ -1,0 +1,19 @@
+{
+  "$schema": "../node_modules/wrangler/config-schema.json",
+  // Google Ads landing page. Separate Worker from the main site so its
+  // noindex headers and CSP never touch waterfiltration.sydney.
+  "name": "waterfiltrationsydney-install",
+  "account_id": "63864e0807a2a62d44577243a33e2526",
+  "compatibility_date": "2026-08-31",
+  "observability": { "enabled": true },
+  "routes": [
+    // Custom domain: Cloudflare creates the DNS record and certificate.
+    { "pattern": "install.waterfiltration.sydney", "custom_domain": true }
+  ],
+  "workers_dev": false,
+  "assets": {
+    "directory": "./public",
+    "html_handling": "drop-trailing-slash",
+    "not_found_handling": "single-page-application"
+  }
+}

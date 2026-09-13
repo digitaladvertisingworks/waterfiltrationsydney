@@ -21,6 +21,7 @@
 /build.js           /  301
 /package.json       /  301
 /wrangler.jsonc     /  301
+/install/*          /  301
 
 # --- NEW ---------------------------------------------------------------------
 # /index.htm was a 404. Send it to the canonical homepage like /index.html.
