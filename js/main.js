@@ -211,3 +211,122 @@ const FALLBACK_EMAIL = 'quote@waterfiltration.sydney';
     timer = setTimeout(init, 250);
   });
 })();
+
+/* Google review carousel ---------------------------------------------------
+   The track is a native scroll-snap row, so it already swipes and scrolls.
+   This adds: arrow buttons that page by one card, arrow disabled states at
+   each end, and a More/Less toggle on reviews too long for the card.       */
+(function () {
+  'use strict';
+
+  var stages = document.querySelectorAll('[data-review-carousel]');
+
+  function setup(stage) {
+    var track = stage.querySelector('.reviews__track');
+    var prev = stage.querySelector('.reviews__nav--prev');
+    var next = stage.querySelector('.reviews__nav--next');
+    var cards = track.querySelectorAll('.review-card');
+
+    function step() {
+      var card = cards[0];
+      var gap = parseFloat(getComputedStyle(track).columnGap) || 0;
+      return card ? card.getBoundingClientRect().width + gap : track.clientWidth;
+    }
+
+    function sync() {
+      var max = track.scrollWidth - track.clientWidth;
+      prev.disabled = track.scrollLeft <= 2;
+      next.disabled = track.scrollLeft >= max - 2;
+      stage.classList.toggle('is-static', max <= 2);
+    }
+
+    /* Show More only where the clamp actually cut text off. */
+    function checkClamps() {
+      for (var i = 0; i < cards.length; i++) {
+        var card = cards[i];
+        var text = card.querySelector('.review-card__text');
+        var more = card.querySelector('.review-card__more');
+        if (!text || !more || card.classList.contains('is-open')) continue;
+        more.hidden = text.scrollHeight <= text.clientHeight + 1;
+      }
+    }
+
+    prev.addEventListener('click', function () { track.scrollBy({ left: -step(), behavior: 'smooth' }); });
+    next.addEventListener('click', function () { track.scrollBy({ left: step(), behavior: 'smooth' }); });
+
+    track.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowLeft') { e.preventDefault(); prev.click(); }
+      if (e.key === 'ArrowRight') { e.preventDefault(); next.click(); }
+    });
+
+    track.addEventListener('click', function (e) {
+      var more = e.target.closest('.review-card__more');
+      if (!more) return;
+      var open = more.closest('.review-card').classList.toggle('is-open');
+      more.textContent = open ? 'Less' : 'More';
+      more.setAttribute('aria-expanded', String(open));
+    });
+
+    var ticking = false;
+    track.addEventListener('scroll', function () {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(function () { sync(); ticking = false; });
+    }, { passive: true });
+
+    var timer;
+    window.addEventListener('resize', function () {
+      clearTimeout(timer);
+      timer = setTimeout(function () { checkClamps(); sync(); }, 150);
+    });
+
+    checkClamps();
+    sync();
+  }
+
+  for (var i = 0; i < stages.length; i++) setup(stages[i]);
+})();
+
+/* Find your fit -------------------------------------------------------------
+   The three picks swap the description, the product card and which spots
+   light up on the house. A card's button also pre-selects the matching
+   option in the quote form, so the visitor does not answer twice.         */
+(function () {
+  'use strict';
+
+  var fit = document.querySelector('[data-fit]');
+  if (!fit) return;
+
+  var picks = fit.querySelectorAll('[data-fit-pick]');
+  var panes = fit.querySelectorAll('[data-fit-show]');
+  var spots = fit.querySelectorAll('.fit-hs');
+
+  function show(mode) {
+    fit.setAttribute('data-fit', mode);
+    for (var i = 0; i < picks.length; i++) {
+      picks[i].setAttribute('aria-pressed', String(picks[i].getAttribute('data-fit-pick') === mode));
+    }
+    for (var j = 0; j < panes.length; j++) {
+      panes[j].hidden = panes[j].getAttribute('data-fit-show') !== mode;
+    }
+    for (var k = 0; k < spots.length; k++) {
+      var on = (' ' + spots[k].getAttribute('data-on') + ' ').indexOf(' ' + mode + ' ') !== -1;
+      spots[k].classList.toggle('is-on', on);
+    }
+  }
+
+  for (var i = 0; i < picks.length; i++) {
+    picks[i].addEventListener('click', function () { show(this.getAttribute('data-fit-pick')); });
+  }
+
+  fit.addEventListener('click', function (e) {
+    var link = e.target.closest('[data-need]');
+    if (!link) return;
+    var radios = document.querySelectorAll('input[name="Filtration required"]');
+    for (var r = 0; r < radios.length; r++) {
+      if (radios[r].value === link.getAttribute('data-need')) radios[r].checked = true;
+    }
+  });
+
+  show(fit.getAttribute('data-fit') || 'both');
+})();

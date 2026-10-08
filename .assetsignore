@@ -41,3 +41,13 @@ CLAUDE.md
 
 # install.waterfiltration.sydney (Google Ads lander) — its own Worker, see install/
 install
+ads/
+
+# Research and backups, never served: Search Console / SpyFu exports, the
+# pre-SEO snapshot, and the Google Ads Editor build (ads/ above)
+GSC
+spyfu
+.seo-backup-20260904
+
+# Image no page references (the site uses badge-google-rating-v2)
+images/badge-google-rating.webp

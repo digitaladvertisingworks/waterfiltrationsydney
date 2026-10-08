@@ -1,0 +1,622 @@
+Category,Negative keyword,Match type
+Jobs & training,job,PHRASE
+Jobs & training,jobs,PHRASE
+Jobs & training,career,PHRASE
+Jobs & training,careers,PHRASE
+Jobs & training,vacancy,PHRASE
+Jobs & training,vacancies,PHRASE
+Jobs & training,hiring,PHRASE
+Jobs & training,employment,PHRASE
+Jobs & training,salary,PHRASE
+Jobs & training,wage,PHRASE
+Jobs & training,apprentice,PHRASE
+Jobs & training,apprenticeship,PHRASE
+Jobs & training,traineeship,PHRASE
+Jobs & training,course,PHRASE
+Jobs & training,courses,PHRASE
+Jobs & training,certificate iii,PHRASE
+Jobs & training,tafe,PHRASE
+Jobs & training,training,PHRASE
+Jobs & training,resume,PHRASE
+Jobs & training,seek,PHRASE
+Jobs & training,indeed,PHRASE
+Jobs & training,recruitment,PHRASE
+Jobs & training,volunteer,PHRASE
+Jobs & training,internship,PHRASE
+Jobs & training,work experience,PHRASE
+DIY & how-to,diy,PHRASE
+DIY & how-to,how to,PHRASE
+DIY & how-to,how do i,PHRASE
+DIY & how-to,how do you,PHRASE
+DIY & how-to,do it yourself,PHRASE
+DIY & how-to,yourself,PHRASE
+DIY & how-to,tutorial,PHRASE
+DIY & how-to,instructions,PHRASE
+DIY & how-to,manual,PHRASE
+DIY & how-to,diagram,PHRASE
+DIY & how-to,schematic,PHRASE
+DIY & how-to,step by step,PHRASE
+DIY & how-to,guide pdf,PHRASE
+DIY & how-to,pdf,PHRASE
+DIY & how-to,youtube,PHRASE
+DIY & how-to,video,PHRASE
+DIY & how-to,videos,PHRASE
+DIY & how-to,install kit,PHRASE
+DIY & how-to,installation kit,PHRASE
+DIY & how-to,fittings kit,PHRASE
+DIY & how-to,self install,PHRASE
+DIY & how-to,self installation,PHRASE
+Research & info (not buying),wikipedia,PHRASE
+Research & info (not buying),wiki,PHRASE
+Research & info (not buying),reddit,PHRASE
+Research & info (not buying),forum,PHRASE
+Research & info (not buying),whirlpool forum,PHRASE
+Research & info (not buying),quora,PHRASE
+Research & info (not buying),definition,PHRASE
+Research & info (not buying),meaning,PHRASE
+Research & info (not buying),what is a,PHRASE
+Research & info (not buying),what is an,PHRASE
+Research & info (not buying),what does,PHRASE
+Research & info (not buying),history of,PHRASE
+Research & info (not buying),invented,PHRASE
+Research & info (not buying),essay,PHRASE
+Research & info (not buying),assignment,PHRASE
+Research & info (not buying),science project,PHRASE
+Research & info (not buying),experiment,PHRASE
+Research & info (not buying),worksheet,PHRASE
+Research & info (not buying),diagram of,PHRASE
+Research & info (not buying),ppt,PHRASE
+Research & info (not buying),powerpoint,PHRASE
+Research & info (not buying),statistics,PHRASE
+Research & info (not buying),market size,PHRASE
+Research & info (not buying),industry report,PHRASE
+Research & info (not buying),research paper,PHRASE
+Research & info (not buying),journal,PHRASE
+Research & info (not buying),thesis,PHRASE
+"Buying products, not installs",buy,PHRASE
+"Buying products, not installs",buy online,PHRASE
+"Buying products, not installs",online shop,PHRASE
+"Buying products, not installs",shop online,PHRASE
+"Buying products, not installs",for sale,PHRASE
+"Buying products, not installs",on sale,PHRASE
+"Buying products, not installs",sale,PHRASE
+"Buying products, not installs",cheap,PHRASE
+"Buying products, not installs",cheapest,PHRASE
+"Buying products, not installs",discount,PHRASE
+"Buying products, not installs",coupon,PHRASE
+"Buying products, not installs",promo code,PHRASE
+"Buying products, not installs",voucher,PHRASE
+"Buying products, not installs",afterpay,PHRASE
+"Buying products, not installs",zip pay,PHRASE
+"Buying products, not installs",clearance,PHRASE
+"Buying products, not installs",wholesale,PHRASE
+"Buying products, not installs",bulk buy,PHRASE
+"Buying products, not installs",free shipping,PHRASE
+"Buying products, not installs",shipping,PHRASE
+"Buying products, not installs",delivery australia,PHRASE
+"Buying products, not installs",dispatch,PHRASE
+"Buying products, not installs",in stock,PHRASE
+"Buying products, not installs",catalogue,PHRASE
+"Buying products, not installs",second hand,PHRASE
+"Buying products, not installs",secondhand,PHRASE
+"Buying products, not installs",used,PHRASE
+"Buying products, not installs",refurbished,PHRASE
+"Buying products, not installs",gumtree,PHRASE
+"Buying products, not installs",marketplace,PHRASE
+"Buying products, not installs",facebook marketplace,PHRASE
+"Buying products, not installs",ebay,PHRASE
+"Buying products, not installs",amazon,PHRASE
+"Buying products, not installs",aliexpress,PHRASE
+"Buying products, not installs",temu,PHRASE
+"Buying products, not installs",catch,PHRASE
+"Buying products, not installs",kogan,PHRASE
+"Buying products, not installs",mydeal,PHRASE
+"Buying products, not installs",trade me,PHRASE
+"Buying products, not installs",bunnings,PHRASE
+"Buying products, not installs",kmart,PHRASE
+"Buying products, not installs",big w,PHRASE
+"Buying products, not installs",target,PHRASE
+"Buying products, not installs",aldi,PHRASE
+"Buying products, not installs",costco,PHRASE
+"Buying products, not installs",ikea,PHRASE
+"Buying products, not installs",woolworths,PHRASE
+"Buying products, not installs",coles,PHRASE
+"Buying products, not installs",officeworks,PHRASE
+"Buying products, not installs",harvey norman,PHRASE
+"Buying products, not installs",jb hi fi,PHRASE
+"Buying products, not installs",jb hifi,PHRASE
+"Buying products, not installs",the good guys,PHRASE
+"Buying products, not installs",appliances online,PHRASE
+"Buying products, not installs",myer,PHRASE
+"Buying products, not installs",david jones,PHRASE
+"Buying products, not installs",mitre 10,PHRASE
+"Buying products, not installs",masters,PHRASE
+"Buying products, not installs",reece,PHRASE
+"Buying products, not installs",tradelink,PHRASE
+"Buying products, not installs",plumbing plus,PHRASE
+"Buying products, not installs",plumbers choice,PHRASE
+"Buying products, not installs",samios,PHRASE
+"Buying products, not installs",bathroom warehouse,PHRASE
+Rental & hire,lease,PHRASE
+Rental & hire,leasing,PHRASE
+Rental & hire,subscription,PHRASE
+"Jugs, bottles & portable",jug,PHRASE
+"Jugs, bottles & portable",jugs,PHRASE
+"Jugs, bottles & portable",pitcher,PHRASE
+"Jugs, bottles & portable",pitchers,PHRASE
+"Jugs, bottles & portable",bottle,PHRASE
+"Jugs, bottles & portable",bottles,PHRASE
+"Jugs, bottles & portable",water bottle,PHRASE
+"Jugs, bottles & portable",drink bottle,PHRASE
+"Jugs, bottles & portable",straw,PHRASE
+"Jugs, bottles & portable",lifestraw,PHRASE
+"Jugs, bottles & portable",portable,PHRASE
+"Jugs, bottles & portable",travel,PHRASE
+"Jugs, bottles & portable",camping,PHRASE
+"Jugs, bottles & portable",camp,PHRASE
+"Jugs, bottles & portable",hiking,PHRASE
+"Jugs, bottles & portable",backpacking,PHRASE
+"Jugs, bottles & portable",survival,PHRASE
+"Jugs, bottles & portable",emergency kit,PHRASE
+"Jugs, bottles & portable",bushwalking,PHRASE
+"Jugs, bottles & portable",caravan,PHRASE
+"Jugs, bottles & portable",caravans,PHRASE
+"Jugs, bottles & portable",rv,PHRASE
+"Jugs, bottles & portable",motorhome,PHRASE
+"Jugs, bottles & portable",boat,PHRASE
+"Jugs, bottles & portable",marine,PHRASE
+"Jugs, bottles & portable",4wd,PHRASE
+"Jugs, bottles & portable",off grid shower,PHRASE
+"Jugs, bottles & portable",cooler hire,PHRASE
+"Jugs, bottles & portable",benchtop,PHRASE
+"Jugs, bottles & portable",countertop,PHRASE
+"Jugs, bottles & portable",gravity filter,PHRASE
+"Jugs, bottles & portable",gravity water filter,PHRASE
+"Jugs, bottles & portable",faucet mount,PHRASE
+"Jugs, bottles & portable",tap mount,PHRASE
+"Jugs, bottles & portable",tap attachment,PHRASE
+Fridge & appliance filters,fridge,PHRASE
+Fridge & appliance filters,fridges,PHRASE
+Fridge & appliance filters,refrigerator,PHRASE
+Fridge & appliance filters,refrigerators,PHRASE
+Fridge & appliance filters,freezer,PHRASE
+Fridge & appliance filters,lg,PHRASE
+Fridge & appliance filters,samsung,PHRASE
+Fridge & appliance filters,fisher and paykel,PHRASE
+Fridge & appliance filters,fisher & paykel,PHRASE
+Fridge & appliance filters,westinghouse,PHRASE
+Fridge & appliance filters,electrolux,PHRASE
+Fridge & appliance filters,haier,PHRASE
+Fridge & appliance filters,hisense,PHRASE
+Fridge & appliance filters,bosch,PHRASE
+Fridge & appliance filters,whirlpool,PHRASE
+Fridge & appliance filters,mitsubishi,PHRASE
+Fridge & appliance filters,panasonic,PHRASE
+Fridge & appliance filters,smeg,PHRASE
+Fridge & appliance filters,miele,PHRASE
+Fridge & appliance filters,kelvinator,PHRASE
+Fridge & appliance filters,ge filter,PHRASE
+Fridge & appliance filters,breville,PHRASE
+Fridge & appliance filters,delonghi,PHRASE
+Fridge & appliance filters,nespresso,PHRASE
+Fridge & appliance filters,kettle,PHRASE
+Fridge & appliance filters,dishwasher,PHRASE
+Fridge & appliance filters,washing machine,PHRASE
+Fridge & appliance filters,dryer,PHRASE
+Fridge & appliance filters,humidifier,PHRASE
+Other kinds of filter,pool,PHRASE
+Other kinds of filter,pools,PHRASE
+Other kinds of filter,pool filter,PHRASE
+Other kinds of filter,spa,PHRASE
+Other kinds of filter,hot tub,PHRASE
+Other kinds of filter,jacuzzi,PHRASE
+Other kinds of filter,pond,PHRASE
+Other kinds of filter,aquarium,PHRASE
+Other kinds of filter,fish tank,PHRASE
+Other kinds of filter,fish,PHRASE
+Other kinds of filter,turtle,PHRASE
+Other kinds of filter,koi,PHRASE
+Other kinds of filter,air filter,PHRASE
+Other kinds of filter,air filters,PHRASE
+Other kinds of filter,air purifier,PHRASE
+Other kinds of filter,air purifiers,PHRASE
+Other kinds of filter,aircon,PHRASE
+Other kinds of filter,air con,PHRASE
+Other kinds of filter,air conditioner,PHRASE
+Other kinds of filter,air conditioning,PHRASE
+Other kinds of filter,hvac,PHRASE
+Other kinds of filter,furnace,PHRASE
+Other kinds of filter,vacuum,PHRASE
+Other kinds of filter,range hood,PHRASE
+Other kinds of filter,rangehood,PHRASE
+Other kinds of filter,car,PHRASE
+Other kinds of filter,cars,PHRASE
+Other kinds of filter,oil filter,PHRASE
+Other kinds of filter,fuel filter,PHRASE
+Other kinds of filter,diesel,PHRASE
+Other kinds of filter,engine,PHRASE
+Other kinds of filter,cabin filter,PHRASE
+Other kinds of filter,motorcycle,PHRASE
+Other kinds of filter,coffee filter,PHRASE
+Other kinds of filter,coffee filters,PHRASE
+Other kinds of filter,beer,PHRASE
+Other kinds of filter,brewing,PHRASE
+Other kinds of filter,homebrew,PHRASE
+Other kinds of filter,wine,PHRASE
+Other kinds of filter,kombucha,PHRASE
+Other kinds of filter,cigarette,PHRASE
+Other kinds of filter,vape,PHRASE
+Other kinds of filter,instagram filter,PHRASE
+Other kinds of filter,photo filter,PHRASE
+Other kinds of filter,camera filter,PHRASE
+Other kinds of filter,lens filter,PHRASE
+Other kinds of filter,snapchat,PHRASE
+Other kinds of filter,aquaponics,PHRASE
+Other kinds of filter,hydroponics,PHRASE
+Other kinds of filter,hydroponic,PHRASE
+Other kinds of filter,irrigation,PHRASE
+Other kinds of filter,garden hose,PHRASE
+Other kinds of filter,hose filter,PHRASE
+Other kinds of filter,sprinkler,PHRASE
+Other kinds of filter,stormwater,PHRASE
+Other kinds of filter,sewage,PHRASE
+Other kinds of filter,septic,PHRASE
+Other kinds of filter,greywater,PHRASE
+Other kinds of filter,grey water,PHRASE
+Other kinds of filter,blackwater,PHRASE
+Other kinds of filter,grease trap,PHRASE
+Other kinds of filter,dust,PHRASE
+Other kinds of filter,smoke,PHRASE
+Other kinds of filter,kitchen exhaust,PHRASE
+Unrelated plumbing & water services,hot water,PHRASE
+Unrelated plumbing & water services,hot water system,PHRASE
+Unrelated plumbing & water services,hot water heater,PHRASE
+Unrelated plumbing & water services,water heater,PHRASE
+Unrelated plumbing & water services,heat pump,PHRASE
+Unrelated plumbing & water services,solar,PHRASE
+Unrelated plumbing & water services,gas fitter,PHRASE
+Unrelated plumbing & water services,gas heater,PHRASE
+Unrelated plumbing & water services,gas leak,PHRASE
+Unrelated plumbing & water services,blocked drain,PHRASE
+Unrelated plumbing & water services,blocked drains,PHRASE
+Unrelated plumbing & water services,blocked toilet,PHRASE
+Unrelated plumbing & water services,drain cleaning,PHRASE
+Unrelated plumbing & water services,burst pipe,PHRASE
+Unrelated plumbing & water services,leaking tap,PHRASE
+Unrelated plumbing & water services,toilet,PHRASE
+Unrelated plumbing & water services,toilets,PHRASE
+Unrelated plumbing & water services,cistern,PHRASE
+Unrelated plumbing & water services,roof,PHRASE
+Unrelated plumbing & water services,gutter,PHRASE
+Unrelated plumbing & water services,gutters,PHRASE
+Unrelated plumbing & water services,downpipe,PHRASE
+Unrelated plumbing & water services,water damage,PHRASE
+Unrelated plumbing & water services,flood,PHRASE
+Unrelated plumbing & water services,mould,PHRASE
+Unrelated plumbing & water services,mold,PHRASE
+Unrelated plumbing & water services,pest control,PHRASE
+Unrelated plumbing & water services,water delivery,PHRASE
+Unrelated plumbing & water services,bottled water delivery,PHRASE
+Unrelated plumbing & water services,water cartage,PHRASE
+Unrelated plumbing & water services,water truck,PHRASE
+Unrelated plumbing & water services,tank cleaning,PHRASE
+Unrelated plumbing & water services,water tank cleaning,PHRASE
+Unrelated plumbing & water services,water bill,PHRASE
+Unrelated plumbing & water services,water rates,PHRASE
+Unrelated plumbing & water services,water meter,PHRASE
+Unrelated plumbing & water services,water restrictions,PHRASE
+Unrelated plumbing & water services,water outage,PHRASE
+Unrelated plumbing & water services,water main break,PHRASE
+Unrelated plumbing & water services,swimming,PHRASE
+Unrelated plumbing & water services,desalination,PHRASE
+Unrelated plumbing & water services,treatment plant,PHRASE
+Unrelated plumbing & water services,wastewater,PHRASE
+Unrelated plumbing & water services,municipal,PHRASE
+Unrelated plumbing & water services,council water,PHRASE
+Unrelated plumbing & water services,mining,PHRASE
+Unrelated plumbing & water services,industrial,PHRASE
+Unrelated plumbing & water services,laboratory,PHRASE
+Unrelated plumbing & water services,lab test,PHRASE
+Unrelated plumbing & water services,dialysis,PHRASE
+Unrelated plumbing & water services,pharmaceutical,PHRASE
+Unrelated plumbing & water services,cooling tower,PHRASE
+Unrelated plumbing & water services,boiler,PHRASE
+Water testing (not offered),water test,PHRASE
+Water testing (not offered),water testing,PHRASE
+Water testing (not offered),water quality test,PHRASE
+Water testing (not offered),water quality testing,PHRASE
+Water testing (not offered),test my water,PHRASE
+Water testing (not offered),water analysis,PHRASE
+Water testing (not offered),water sample,PHRASE
+Water testing (not offered),water testing kit,PHRASE
+Water testing (not offered),water test kit,PHRASE
+"Cartridge shopping (product, not service)",water filter cartridges,EXACT
+"Cartridge shopping (product, not service)",water filter cartridge,EXACT
+"Cartridge shopping (product, not service)",replacement water filter cartridges,EXACT
+"Cartridge shopping (product, not service)",water filter replacement cartridge,EXACT
+"Cartridge shopping (product, not service)",water filter replacement cartridges,EXACT
+"Cartridge shopping (product, not service)",water filters replacement cartridges,EXACT
+"Cartridge shopping (product, not service)",water cartridge filter,EXACT
+"Cartridge shopping (product, not service)",filter for water filter,EXACT
+"Cartridge shopping (product, not service)",water filtration replacement filters,EXACT
+"Cartridge shopping (product, not service)",replacement water filter,EXACT
+"Cartridge shopping (product, not service)",replacement water filters,EXACT
+"Cartridge shopping (product, not service)",water filter filters,EXACT
+"Cartridge shopping (product, not service)",whole house filter cartridge,EXACT
+"Cartridge shopping (product, not service)",whole house water filter cartridges,EXACT
+Replacement searches,replacement,PHRASE
+Replacement searches,replacements,PHRASE
+Wellness gadgets & fads,alkaline,PHRASE
+Wellness gadgets & fads,alkaline water,PHRASE
+Wellness gadgets & fads,ionizer,PHRASE
+Wellness gadgets & fads,ioniser,PHRASE
+Wellness gadgets & fads,ionized,PHRASE
+Wellness gadgets & fads,hydrogen water,PHRASE
+Wellness gadgets & fads,hydrogen,PHRASE
+Wellness gadgets & fads,structured water,PHRASE
+Wellness gadgets & fads,kangen,PHRASE
+Wellness gadgets & fads,tyent,PHRASE
+Wellness gadgets & fads,alkaviva,PHRASE
+Wellness gadgets & fads,zazen,PHRASE
+Wellness gadgets & fads,enagic,PHRASE
+Wellness gadgets & fads,vortex,PHRASE
+Wellness gadgets & fads,magnetic,PHRASE
+Wellness gadgets & fads,shungite,PHRASE
+Wellness gadgets & fads,structured,PHRASE
+Wellness gadgets & fads,deuterium,PHRASE
+Wellness gadgets & fads,energy water,PHRASE
+Business & trade (not our customers),supplier,PHRASE
+Business & trade (not our customers),suppliers,PHRASE
+Business & trade (not our customers),distributor,PHRASE
+Business & trade (not our customers),distributors,PHRASE
+Business & trade (not our customers),manufacturer,PHRASE
+Business & trade (not our customers),manufacturers,PHRASE
+Business & trade (not our customers),manufacturing,PHRASE
+Business & trade (not our customers),factory,PHRASE
+Business & trade (not our customers),oem,PHRASE
+Business & trade (not our customers),dealer,PHRASE
+Business & trade (not our customers),dealers,PHRASE
+Business & trade (not our customers),dealership,PHRASE
+Business & trade (not our customers),franchise,PHRASE
+Business & trade (not our customers),franchises,PHRASE
+Business & trade (not our customers),business for sale,PHRASE
+Business & trade (not our customers),stockist,PHRASE
+Business & trade (not our customers),stockists,PHRASE
+Business & trade (not our customers),reseller,PHRASE
+Business & trade (not our customers),retailer,PHRASE
+Business & trade (not our customers),import,PHRASE
+Business & trade (not our customers),importer,PHRASE
+Business & trade (not our customers),export,PHRASE
+Business & trade (not our customers),exporter,PHRASE
+Business & trade (not our customers),tender,PHRASE
+Business & trade (not our customers),tenders,PHRASE
+Business & trade (not our customers),asx,PHRASE
+Business & trade (not our customers),shares,PHRASE
+Business & trade (not our customers),stock price,PHRASE
+Business & trade (not our customers),annual report,PHRASE
+Places we do not serve,perth,PHRASE
+Places we do not serve,western australia,PHRASE
+Places we do not serve,melbourne,PHRASE
+Places we do not serve,victoria,PHRASE
+Places we do not serve,vic,PHRASE
+Places we do not serve,brisbane,PHRASE
+Places we do not serve,queensland,PHRASE
+Places we do not serve,qld,PHRASE
+Places we do not serve,gold coast,PHRASE
+Places we do not serve,sunshine coast,PHRASE
+Places we do not serve,noosa,PHRASE
+Places we do not serve,toowoomba,PHRASE
+Places we do not serve,cairns,PHRASE
+Places we do not serve,townsville,PHRASE
+Places we do not serve,mackay,PHRASE
+Places we do not serve,rockhampton,PHRASE
+Places we do not serve,bundaberg,PHRASE
+Places we do not serve,hervey bay,PHRASE
+Places we do not serve,adelaide,PHRASE
+Places we do not serve,south australia,PHRASE
+Places we do not serve,darwin,PHRASE
+Places we do not serve,northern territory,PHRASE
+Places we do not serve,alice springs,PHRASE
+Places we do not serve,hobart,PHRASE
+Places we do not serve,launceston,PHRASE
+Places we do not serve,tasmania,PHRASE
+Places we do not serve,geelong,PHRASE
+Places we do not serve,ballarat,PHRASE
+Places we do not serve,bendigo,PHRASE
+Places we do not serve,mildura,PHRASE
+Places we do not serve,albury,PHRASE
+Places we do not serve,wodonga,PHRASE
+Places we do not serve,wagga,PHRASE
+Places we do not serve,wagga wagga,PHRASE
+Places we do not serve,dubbo,PHRASE
+Places we do not serve,bathurst,PHRASE
+Places we do not serve,tamworth,PHRASE
+Places we do not serve,armidale,PHRASE
+Places we do not serve,port macquarie,PHRASE
+Places we do not serve,coffs harbour,PHRASE
+Places we do not serve,lismore,PHRASE
+Places we do not serve,byron bay,PHRASE
+Places we do not serve,ballina,PHRASE
+Places we do not serve,grafton,PHRASE
+Places we do not serve,tweed heads,PHRASE
+Places we do not serve,broken hill,PHRASE
+Places we do not serve,griffith,PHRASE
+Places we do not serve,goulburn,PHRASE
+Places we do not serve,nowra,PHRASE
+Places we do not serve,batemans bay,PHRASE
+Places we do not serve,bega,PHRASE
+Places we do not serve,mandurah,PHRASE
+Places we do not serve,bunbury,PHRASE
+Places we do not serve,rockingham,PHRASE
+Places we do not serve,joondalup,PHRASE
+Places we do not serve,fremantle,PHRASE
+Places we do not serve,new zealand,PHRASE
+Places we do not serve,nz,PHRASE
+Places we do not serve,auckland,PHRASE
+Places we do not serve,wellington,PHRASE
+Places we do not serve,christchurch,PHRASE
+Places we do not serve,uk,PHRASE
+Places we do not serve,united kingdom,PHRASE
+Places we do not serve,london,PHRASE
+Places we do not serve,usa,PHRASE
+Places we do not serve,america,PHRASE
+Places we do not serve,canada,PHRASE
+Places we do not serve,india,PHRASE
+Places we do not serve,singapore,PHRASE
+Places we do not serve,malaysia,PHRASE
+Places we do not serve,dubai,PHRASE
+Places we do not serve,philippines,PHRASE
+Places we do not serve,south africa,PHRASE
+Places we do not serve,ireland,PHRASE
+Competitors (brand-only searches),filter systems australia,PHRASE
+Competitors (brand-only searches),fsa filters,PHRASE
+Competitors (brand-only searches),complete home filtration,PHRASE
+Competitors (brand-only searches),chf filter,PHRASE
+Competitors (brand-only searches),chf filters,PHRASE
+Competitors (brand-only searches),water analytics,PHRASE
+Competitors (brand-only searches),waa water,PHRASE
+Competitors (brand-only searches),clean and clear water,PHRASE
+Competitors (brand-only searches),clean & clear water,PHRASE
+Competitors (brand-only searches),cleanandclear,PHRASE
+Competitors (brand-only searches),waters co,PHRASE
+Competitors (brand-only searches),watersco,PHRASE
+Competitors (brand-only searches),great water filters,PHRASE
+Competitors (brand-only searches),hydraflo,PHRASE
+Competitors (brand-only searches),filpure,PHRASE
+Competitors (brand-only searches),filtap,PHRASE
+Competitors (brand-only searches),minthome,PHRASE
+Competitors (brand-only searches),mint home filtration,PHRASE
+Competitors (brand-only searches),sunshine coast water filters,PHRASE
+Competitors (brand-only searches),clarence water filters,PHRASE
+Competitors (brand-only searches),west flow filtration,PHRASE
+Competitors (brand-only searches),westflow,PHRASE
+Competitors (brand-only searches),urban future,PHRASE
+Competitors (brand-only searches),dolphin home filtration,PHRASE
+Competitors (brand-only searches),pure mains water,PHRASE
+Competitors (brand-only searches),aquarius water filters,PHRASE
+Competitors (brand-only searches),neighbourhood water filtration,PHRASE
+Competitors (brand-only searches),hilton plumbing,PHRASE
+Competitors (brand-only searches),pure flow filtration,PHRASE
+Competitors (brand-only searches),pureflow,PHRASE
+Competitors (brand-only searches),demand filtration,PHRASE
+Competitors (brand-only searches),full house filtration,PHRASE
+Competitors (brand-only searches),filtered beauty,PHRASE
+Competitors (brand-only searches),awesome water,PHRASE
+Competitors (brand-only searches),aqua plus filtration,PHRASE
+Competitors (brand-only searches),aquaco,PHRASE
+Competitors (brand-only searches),aquaman,PHRASE
+Competitors (brand-only searches),aquaport,PHRASE
+Competitors (brand-only searches),aquasafe,PHRASE
+Competitors (brand-only searches),aquasana,PHRASE
+Competitors (brand-only searches),auswaterfilters,PHRASE
+Competitors (brand-only searches),bibo,PHRASE
+Competitors (brand-only searches),bespoke water,PHRASE
+Competitors (brand-only searches),purest water filtration,PHRASE
+Competitors (brand-only searches),purple duck,PHRASE
+Competitors (brand-only searches),safemains,PHRASE
+Competitors (brand-only searches),summit filtration,PHRASE
+Competitors (brand-only searches),tryselene,PHRASE
+Competitors (brand-only searches),selene water,PHRASE
+Competitors (brand-only searches),aquaserve,PHRASE
+Competitors (brand-only searches),inflow filter,PHRASE
+Competitors (brand-only searches),tappwater,PHRASE
+Competitors (brand-only searches),tapp water,PHRASE
+Competitors (brand-only searches),carawater,PHRASE
+Competitors (brand-only searches),aquastream,PHRASE
+Competitors (brand-only searches),cloudtap,PHRASE
+Competitors (brand-only searches),filtermate,PHRASE
+Competitors (brand-only searches),filtersforyou,PHRASE
+Competitors (brand-only searches),waterfilter.au,PHRASE
+Competitors (brand-only searches),waterfilter.com.au,PHRASE
+Competitors (brand-only searches),mywaterfilter,PHRASE
+Competitors (brand-only searches),oz filter warehouse,PHRASE
+Competitors (brand-only searches),discount fridge filters,PHRASE
+Competitors (brand-only searches),water filter warehouse,PHRASE
+Competitors (brand-only searches),hydroflow,PHRASE
+Competitors (brand-only searches),wellverti,PHRASE
+Competitors (brand-only searches),watego,PHRASE
+Competitors (brand-only searches),mineral stream,PHRASE
+Competitors (brand-only searches),hydrochem,PHRASE
+Competitors (brand-only searches),aqua clear industries,PHRASE
+Competitors (brand-only searches),thinkwater,PHRASE
+Competitors (brand-only searches),membrane shop,PHRASE
+Competitors (brand-only searches),centurion aprs,PHRASE
+Competitors (brand-only searches),aquala,PHRASE
+Competitors (brand-only searches),lords plumbing,PHRASE
+Competitors (brand-only searches),rose plumbing,PHRASE
+Competitors (brand-only searches),network plumbing,PHRASE
+Competitors (brand-only searches),salmon plumbing,PHRASE
+Competitors (brand-only searches),wilco plumbing,PHRASE
+Competitors (brand-only searches),collis bros,PHRASE
+Competitors (brand-only searches),irwins plumbing,PHRASE
+Competitors (brand-only searches),atc plumbing,PHRASE
+Competitors (brand-only searches),neverfail,PHRASE
+Competitors (brand-only searches),aussie natural,PHRASE
+Competitors (brand-only searches),novoh2o,PHRASE
+Competitors (brand-only searches),novo h2o,PHRASE
+Competitors (brand-only searches),smart h2o,PHRASE
+Competitors (brand-only searches),value h2o,PHRASE
+Competitors (brand-only searches),aqua cooler direct,PHRASE
+Competitors (brand-only searches),waterlogic,PHRASE
+Competitors (brand-only searches),culligan,PHRASE
+Competitors (brand-only searches),kinetico,PHRASE
+Competitors (brand-only searches),pentair,PHRASE
+Competitors (brand-only searches),davey,PHRASE
+Competitors (brand-only searches),waterco,PHRASE
+Competitors (brand-only searches),stiebel eltron,PHRASE
+Competitors (brand-only searches),insinkerator,PHRASE
+Competitors (brand-only searches),uv guard,PHRASE
+Competitors (brand-only searches),psi water filters,PHRASE
+Competitors (brand-only searches),psi filters,PHRASE
+Competitors (brand-only searches),alps water filter,PHRASE
+Competitors (brand-only searches),doulton,PHRASE
+Competitors (brand-only searches),stefani,PHRASE
+Competitors (brand-only searches),berkey,PHRASE
+Competitors (brand-only searches),brita,PHRASE
+Competitors (brand-only searches),philips water,PHRASE
+Competitors (brand-only searches),waterdrop,PHRASE
+Competitors (brand-only searches),aquatru,PHRASE
+Competitors (brand-only searches),sawyer,PHRASE
+Competitors (brand-only searches),ecobud,PHRASE
+Competitors (brand-only searches),kyn and folk,PHRASE
+Competitors (brand-only searches),kyn & folk,PHRASE
+Competitors (brand-only searches),3m water,PHRASE
+Competitors (brand-only searches),everpure,PHRASE
+Competitors (brand-only searches),omnipure,PHRASE
+Competitors (brand-only searches),bluewater,PHRASE
+Competitors (brand-only searches),lifesource,PHRASE
+Competitors (brand-only searches),springwell,PHRASE
+Competitors (brand-only searches),pelican water,PHRASE
+Competitors (brand-only searches),apec,PHRASE
+Competitors (brand-only searches),ispring,PHRASE
+Competitors (brand-only searches),frizzlife,PHRASE
+Competitors (brand-only searches),aquaphor,PHRASE
+Competitors (brand-only searches),ametek,PHRASE
+Competitors (brand-only searches),puretech,PHRASE
+Competitors (brand-only searches),pur water,PHRASE
+Competitors (brand-only searches),zerowater,PHRASE
+Competitors (brand-only searches),zero water,PHRASE
+Competitors (brand-only searches),tupperware,PHRASE
+Competitors (brand-only searches),nikken,PHRASE
+Competitors (brand-only searches),amway,PHRASE
+Competitors (brand-only searches),espring,PHRASE
+Competitors (brand-only searches),coway,PHRASE
+Competitors (brand-only searches),cuckoo,PHRASE
+Competitors (brand-only searches),kent ro,PHRASE
+Competitors (brand-only searches),aquaguard,PHRASE
+Competitors (brand-only searches),livpure,PHRASE
+Competitors (brand-only searches),bestwater,PHRASE
+Competitors (brand names that are ordinary words),pure water systems,EXACT
+Competitors (brand names that are ordinary words),pure water systems australia,EXACT
+Competitors (brand names that are ordinary words),filtered water solutions,EXACT
+Competitors (brand names that are ordinary words),water filters australia,EXACT
+Competitors (brand names that are ordinary words),water filtration solutions,EXACT
+Competitors (brand names that are ordinary words),the water shop,EXACT
+Competitors (brand names that are ordinary words),water filters online,EXACT
+Competitors (brand names that are ordinary words),my water filter australia,EXACT
+Competitors (brand names that are ordinary words),clear water filter australia,EXACT
+Competitors (brand names that are ordinary words),clear water filter melbourne,EXACT
+Competitors (brand names that are ordinary words),water filter distributors,EXACT
+Competitors (brand names that are ordinary words),filter systems australia reviews,EXACT
+Competitors (brand names that are ordinary words),water analytics australia,EXACT
+Competitors (brand names that are ordinary words),great water filters australia,EXACT
