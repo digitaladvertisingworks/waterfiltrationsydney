@@ -107,11 +107,12 @@ GROUP_LINES = {
     'Whole House': ['Filtered Water at Every Tap', 'Whole-House Filters Installed'],
     'Under-Sink & Filter Taps': ['Under-Sink Filters Installed', 'Filter Taps Fitted Neatly'],
     'Reverse Osmosis': ['Reverse Osmosis Installed', 'RO Sized to Your Pressure'],
-    'Service & Replacement': ['Cartridges Replaced & Serviced', 'We Service Other Brands Too'],
+    'Service & Replacement': ['Filter Servicing Available', 'We Service Other Brands Too'],
     'Cost & Quote': ['Fixed Installed Price Quoted', 'Know the Cost Before You Book'],
     'Brand Installs': ['Licensed Install, Any Brand', 'Fitted by a Licensed Plumber'],
     'Brand': ['Safe Water Filtration', 'Licensed Water Filter Plumbers'],
-    'Systems & Service': ['Whole-House, Under-Sink & RO', 'Cartridges Replaced & Serviced'],
+    'Systems & Service': ['Whole-House, Under-Sink & RO', 'Filter Servicing Available'],
+    'Plumber': ['Licensed Water Filter Plumber', 'A Plumber Installs Your Filter'],
 }
 
 
@@ -124,14 +125,14 @@ def angle_headlines(angle, area, act):
                 'Not a Kit. A Licensed Install', 'WaterMark Certified Parts', 'Pressure-Tested Joints',
                 'Book a Licensed Installer', 'Servicing Clearance Built In', 'Commissioned in One Visit'] + lic + local
     if angle == 'B':  # costs and measurements upfront
-        return ['Cartridge Costs Upfront', 'Know the Running Cost First', 'No Surprise at First Service',
+        return ['Running Costs Upfront', 'Know the Running Cost First', 'No Surprise at First Service',
                 'Fixed Installed Price', 'Pressure Checked, Then Sized', 'Flow Checked Before We Leave',
-                'Sized to Your Home\'s Flow', 'We Say What It Won\'t Fix', 'Quote Lists Every Cartridge',
-                'Every Cartridge Priced', 'Change Intervals Explained', 'We Measure, Then Specify'] + local
+                'Sized to Your Home\'s Flow', 'We Say What It Won\'t Fix', 'Itemised Quote, No Surprises',
+                'Ongoing Costs Shown Upfront', 'Change Intervals Explained', 'We Measure, Then Specify'] + local
     return ['Your Fixed Price Upfront', 'No Pressure, No Obligation', 'Nothing Booked Till You Agree',
             'One Price, One Plumber', 'Compare Us Properly', 'Sometimes Under-Sink Is Enough',
             'Honest Advice, Fixed Price', 'Get a Free Quote', 'Talk to the Plumber Direct',
-            'Plumber-Led Quote, Not a Pitch', 'Fixed Price, Cartridges Listed', 'Honest Advice on Your Water'] + local
+            'Plumber-Led Quote, Not a Pitch', 'Fixed Price, Costs Itemised', 'Honest Advice on Your Water'] + local
 
 
 def sydney_extras(angle):
@@ -146,9 +147,9 @@ def descriptions(angle, area, act, dki_default):
               'Lifetime warranty on our installation labour. If our workmanship fails, we come back.',
               'Housings mounted where the sumps can actually be dropped at change time. Area left clean.',
               'Installed, pressure-tested and commissioned in one visit. Flow checked before we leave.'],
-        'B': ['Your quote shows the fixed installed price and what each replacement cartridge costs.',
+        'B': ['Your quote shows the fixed installed price and the ongoing running costs.',
               'We check incoming pressure and peak demand before we specify any whole-house system.',
-              f'{{KeyWord:{dki_default}}}: fixed price, every cartridge listed.',
+              f'{{KeyWord:{dki_default}}}: fixed price, running costs itemised.',
               'We tell you what a system is designed to reduce and what it is not, before you spend.'],
         'C': ['No obligation, no pressure. Nothing is booked until you have the price.',
               'Fixed installed price with the running costs shown, so you can compare us fairly.',
@@ -256,6 +257,10 @@ ADDITIONS = {
         'Brand': ('Safe Water Filtration', [
             'safe water filtration', 'safe water filtration sydney', 'safe water filtration reviews',
             'water filtration sydney reviews', 'waterfiltration.sydney']),
+        # added 8 Oct 2026; 'plumber to install water filter' stays in Cost & Quote here
+        'Plumber': ('Water Filter Plumber', [
+            'water filtration plumber', 'plumber to install reverse osmosis system',
+            'plumber to install water filtration system']),
     },
 }
 for area in AREAS:
@@ -266,6 +271,9 @@ for area in AREAS:
                                                           f'water filter installation quote {r}']),
             'Brand': ('Safe Water Filtration', ['safe water filtration', f'safe water filtration {r}',
                                                 'safe water filtration reviews']),
+            'Plumber': ('Water Filter Plumber', [
+                'water filtration plumber', 'plumber to install water filter',
+                'plumber to install reverse osmosis system', 'plumber to install water filtration system']),
         }
 add_stats = {'ad groups': 0, 'keywords': 0, 'ads': 0}
 for area, groups in ADDITIONS.items():
