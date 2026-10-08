@@ -82,6 +82,10 @@ function areaSwaps(slug, { name, place = name, inPlace = `in ${place}`, state = 
     [/<figcaption class="recent-install__chip"><strong>[^<]*<\/strong><span>([^<]*)<\/span><\/figcaption>/g,
      '<figcaption class="recent-install__chip"><strong>$1</strong></figcaption>'],
     [/(alt="Customers? (?:beside|inspecting) [^"]*?) in (?:Castle Hill|Baulkham Hills|Rose Bay|Cronulla|Parramatta)"/g, '$1"'],
+    ['class="fit__title">Water filters for <span>Sydney homes.</span>',
+     `class="fit__title">Water filters for <span>${name} homes.</span>`],
+    ['class="fit__kicker">Water filter installation across Sydney<', `class="fit__kicker">Water filter installation across ${place}<`],
+    ['at a kitchen sink in a Sydney home"', 'at a kitchen sink in a home"'],
     ['Houses, townhouses and apartments across Sydney.', `Houses, townhouses and apartments across ${place}.`],
     ['<h2 id="area-title">Across Sydney &amp; Greater Sydney</h2>', `<h2 id="area-title">Across ${place} &amp; Surrounds</h2>`],
     [/<ul class="chips">[\s\S]*?<\/ul>/, `<ul class="chips">
