@@ -81,7 +81,7 @@ function areaSwaps(slug, { name, place = name, inPlace = `in ${place}`, state = 
      'Real homes, real installations and filtration systems fitted by our licensed team.'],
     [/<figcaption class="recent-install__chip"><strong>[^<]*<\/strong><span>([^<]*)<\/span><\/figcaption>/g,
      '<figcaption class="recent-install__chip"><strong>$1</strong></figcaption>'],
-    [/(alt="Customers? (?:beside|inspecting) [^"]*?) in (?:Castle Hill|Baulkham Hills|Rose Bay|Cronulla|Parramatta)"/g, '$1"'],
+    [/(alt="Customers? (?:beside|inspecting) [^"]*?) (?:in|on) (?:Castle Hill|Baulkham Hills|Rose Bay|Cronulla|Parramatta|the Northern Beaches|the Sutherland Shire|the Eastern Suburbs|the Sydney CBD)"/g, '$1"'],
     ['class="fit__title">Water filters for <span>Sydney homes.</span>',
      `class="fit__title">Water filters for <span>${name} homes.</span>`],
     ['class="fit__kicker">Water filter installation across Sydney<', `class="fit__kicker">Water filter installation across ${place}<`],

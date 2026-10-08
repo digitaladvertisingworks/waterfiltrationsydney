@@ -19,7 +19,7 @@ site.json
 build.js
 
 # Repo material that was never meant to be public.
-# img/ holds the original supplied photos; only the five recent-installation
+# img/ holds the original supplied photos; only the recent-installation
 # JPGs referenced by the site are committed, so they must stay uploadable.
 img/*
 !img/recent-installation-*.jpg

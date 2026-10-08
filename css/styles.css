@@ -482,6 +482,9 @@ summary:focus-visible {
   .recent-install--rose-bay img { object-position: 50% 35%; }
   .recent-install--cronulla img { object-position: 50% 30%; }
   .recent-install--parramatta img { object-position: 50% 45%; }
+  .recent-install--sutherland-shire-2 img { object-position: 50% 30%; }
+  .recent-install--eastern-suburbs img { object-position: 50% 25%; }
+  .recent-install--cbd img { object-position: 50% 45%; }
 }
 @media (min-width: 620px) {
   .recent-installs__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
