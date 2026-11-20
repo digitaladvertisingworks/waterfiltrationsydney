@@ -372,3 +372,9 @@ the home page's design system (no new colours, fonts or components invented).
   list under the button now holds one de-duplicated list: Licence + police/ID, $20M PL, lifetime labour + 3-yr product
   warranty, WaterMark components, Sydney Metro & Greater Sydney. Backup: `_work/2026-11-20/backup-before-hero-merge/`.
 - Known, pre-existing: on contact-us at 390px the "We're Open Now" pill pushes the page 3px wide.
+- Stale-CSS fix (2026-11-20, Version ID cd0b6972-f89e-4e70-9087-1208917ee0f8): the user saw the new `.proof-title`
+  unstyled. Workers static assets ignore the query string and take up to ~1 min to propagate, so a browser that loaded
+  the new HTML in that window got the OLD hero-vs.css under the new ?v= URL and cached it for 7 days (max-age=604800).
+  Fixed by bumping to v=20261120j in a deploy where the CSS itself did not change.
+  **Rule:** after any deploy that changes CSS/JS, do a second deploy that only bumps the ?v= again once the first has
+  propagated (or rename the file), so nobody keeps a stale copy.
