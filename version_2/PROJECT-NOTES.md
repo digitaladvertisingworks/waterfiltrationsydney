@@ -356,3 +356,19 @@ the home page's design system (no new colours, fonts or components invented).
   (index, contact-us, verify). Footer "&#xb7; verify it" link to the NSW register removed (contact-us, verify).
 - Backups: `_work/2026-11-20/backup-before-licence-chip/`. Rebuilt with `node build-lander.js`, deployed with
   `npx wrangler deploy -c install/wrangler.jsonc`, Version ID 054cc7f5-ea59-47d2-be92-9ea48fca0ec7. Live check passed.
+
+## Hero facts de-duped + footer Compliance grid (2026-11-20, built, NOT yet deployed)
+- Hero facts list under the Call button: removed "WaterMark certified components on every install" and
+  "Lifetime labour warranty plus 3-year product warranty" (already in the hero chips). Backup: `_work/2026-11-20/backup-before-facts-dedupe/`.
+- Footer (index, contact-us, verify, thank-you): "Licence & Compliance" column and the "NSW Licence No. ... Verify" line
+  replaced by a full-width Compliance `dl` grid copied from the main site footer (8 items, 4 cols desktop, 2 cols >=560px,
+  1 col phone), navy colours. CSS at the end of hero-vs.css (cache bust v=20261120h); `.sr-only` added there too.
+  Backup: `_work/2026-11-20/backup-before-footer-compliance/`. Screenshots: `_work/2026-11-20/shots/`.
+- Logo strips titled "Licensed, Insured & Accredited Water Filter Plumber": `.proof-title` above the home page badge
+  marquee (takes over the marquee's pull-up under the hero) and `.hero-proof__title` above the hero logo row on
+  contact-us and verify. CSS end of hero-vs.css, cache bust v=20261120i. Backup: `_work/2026-11-20/backup-before-logo-title/`.
+- Deployed the three changes above 2026-11-20, Version ID 7a8bc551-aeca-49ad-8030-eac03d22df23 (/verify took ~1 min to clear the edge cache).
+- Hero merge (deployed 2026-11-20, Version ID bc1d0d60-e5c9-457e-bc12-9c765d48534e): `.hero-chips` above the button removed on index, contact-us, verify; the facts
+  list under the button now holds one de-duplicated list: Licence + police/ID, $20M PL, lifetime labour + 3-yr product
+  warranty, WaterMark components, Sydney Metro & Greater Sydney. Backup: `_work/2026-11-20/backup-before-hero-merge/`.
+- Known, pre-existing: on contact-us at 390px the "We're Open Now" pill pushes the page 3px wide.
