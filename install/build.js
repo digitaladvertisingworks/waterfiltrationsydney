@@ -6,6 +6,12 @@
  * Run `npm run build` first: this reads the committed index.html and
  * thank-you.html at the repo root, so the lander always matches the homepage.
  *
+ * WARNING (2026-11-20): install/public is now served from version_2 instead.
+ * This script still rebuilds it from the OLD root-site lander and deletes
+ * whatever is there first. If you run it, run `node version_2/build-lander.js`
+ * afterwards to put the current lander, contact page, thank-you page and
+ * verify page back.
+ *
  * What changes versus the main site
  *   - noindex on every page (paid traffic only; the main site owns rankings)
  *   - no canonical, no JSON-LD, no /business-info preload

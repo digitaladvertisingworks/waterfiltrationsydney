@@ -1,0 +1,330 @@
+/* Water Filtration Sydney v2: styles used only by the sub pages
+   (contact-us.html, thank-you.html). Loaded after styles.css and hero-vs.css,
+   so anything here wins on equal specificity. Mobile first. */
+
+/* ---------- Hero top strip: breadcrumb + open-now pill ---------- */
+.hero-top {
+  max-width: 1440px;
+  margin: 0 auto 16px;
+  padding: 0 var(--gutter);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px 16px;
+}
+.crumb { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font: 600 13px/1.4 var(--body); }
+.crumb a { color: #9fe2ff; text-decoration: none; }
+.crumb a:hover { text-decoration: underline; }
+.crumb__sep { color: rgba(255,255,255,.4); }
+.crumb [aria-current] { color: #fff; }
+
+/* ---------- Contact form: optional fields behind one link ---------- */
+.more-fields { display: contents; }
+.more-fields[hidden] { display: none; }
+.more-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 12px 0 2px;
+  padding: 6px 0;
+  background: none;
+  border: 0;
+  font: 700 14px/1.3 var(--body);
+  color: var(--blue-text);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+.more-toggle:hover { color: var(--navy); }
+.more-toggle[aria-expanded="true"] { color: var(--navy); }
+
+/* ---------- Three ways to reach us ---------- */
+.ways { padding: 56px 0 20px; background: #fff; }
+.ways .center-head { margin-bottom: 26px; }
+.ways__grid {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+  display: grid;
+  gap: 16px;
+}
+.wcard {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: var(--pale);
+  border-radius: 28px;
+  padding: 28px 22px 26px;
+  text-align: center;
+}
+.wcard__icon {
+  display: grid;
+  place-items: center;
+  width: 62px;
+  height: 62px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: var(--navy);
+  color: #fff;
+}
+.wcard__icon .ic { width: 28px; height: 28px; }
+.wcard__best {
+  font: 700 12px/1.4 var(--body);
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--blue-text);
+}
+.wcard h3 { font-size: 24px; }
+.wcard p { font-size: 16px; line-height: 1.5; }
+.wcard .btn { margin-top: auto; align-self: center; max-width: 100%; white-space: normal; }
+
+/* ---------- Canonical business details card (inside the navy band) ---------- */
+.nap { display: grid; gap: 12px; margin-bottom: 20px; }
+.nap li { display: flex; align-items: flex-start; gap: 12px; font-size: 17px; line-height: 1.45; }
+.nap .ic { width: 22px; height: 22px; color: var(--blue-text); margin-top: 3px; }
+.nap a { color: var(--navy); font-weight: 700; text-decoration: none; }
+.nap a:hover { text-decoration: underline; }
+.contact__card .checks { margin-bottom: 0; }
+.contact__card .checks li { font-size: 16px; line-height: 1.5; }
+.contact__card .checks a { color: var(--blue-text); font-weight: 700; }
+.nap-note { font-size: 14px; line-height: 1.5; color: var(--muted); margin-top: 16px; }
+.contact__card .btn-row { margin-top: 20px; }
+.contact__card .btn-row .btn { flex: 1 1 200px; }
+
+/* ---------- Final CTA band: warranty reversal + fine print ---------- */
+.warranty {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  max-width: 720px;
+  margin: 26px auto 0;
+  padding: 18px 20px;
+  text-align: left;
+  background: rgba(255,255,255,.07);
+  border: 1px solid rgba(255,255,255,.16);
+  border-radius: 20px;
+}
+.warranty .ic { width: 26px; height: 26px; color: #5cc6ff; flex: none; margin-top: 2px; }
+.warranty p { font-size: 15px; line-height: 1.5; color: #d6def5; }
+.warranty strong { color: #fff; }
+.band__fine { margin-top: 18px; font-size: 13px; line-height: 1.5; color: #9fb6e8; }
+
+/* ---------- Thank-you page ---------- */
+.thanks { position: relative; background: var(--navy-deep) radial-gradient(ellipse at 80% 10%, rgba(17,146,214,.35) 0, transparent 55%); color: #fff; padding: 34px 0 44px; }
+.thanks__in { max-width: 1440px; margin: 0 auto; padding: 0 var(--gutter); display: grid; gap: 22px; }
+.thanks__tick {
+  display: grid;
+  place-items: center;
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+  background: #36c45a;
+  color: #fff;
+}
+.thanks__tick .ic { width: 34px; height: 34px; }
+.thanks h1 { font-size: 32px; line-height: 1.05; color: #fff; text-wrap: balance; }
+.thanks h1 .h1-hl { color: #9fe2ff; }
+.thanks__lede { font-size: 17px; line-height: 1.5; color: #e6eefc; max-width: 56ch; }
+.thanks__lede strong { color: #fff; }
+.thanks__copy > * + * { margin-top: 14px; }
+.thanks__cta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+.thanks__cta .btn { flex: 1 1 220px; }
+.thanks__urgent { font-size: 15px; line-height: 1.5; color: #c9d6f3; }
+.thanks__urgent a { color: #9fe2ff; font-weight: 700; }
+
+/* Card on the thank-you hero: what to have ready */
+.ready {
+  background: var(--light);
+  color: var(--ink);
+  border-radius: 28px;
+  padding: 26px 22px 24px;
+}
+.ready h2 { font-size: 24px; margin-bottom: 6px; }
+.ready > p { font-size: 15px; line-height: 1.5; color: var(--muted); margin-bottom: 16px; }
+.ready .checks li { font-size: 16px; line-height: 1.5; }
+.ready__note { font-size: 14px; line-height: 1.5; color: var(--muted); margin-top: 14px; }
+
+/* Next steps on the thank-you page: numbered, on the navy band */
+.nextup { background: var(--navy); padding: 54px 0 56px; }
+.nextup__in { max-width: 1100px; margin: 0 auto; padding: 0 var(--gutter); }
+.nextup .kicker { color: #6fc6f2; }
+.nextup h2 { color: #fff; font-size: 30px; margin-bottom: 22px; }
+.nextup .steps { margin-top: 4px; }
+
+/* While you wait: links to the rest of the page */
+.wait { background: #fff; padding: 56px 0 60px; }
+.wait__grid { max-width: 1440px; margin: 26px auto 0; padding: 0 var(--gutter); display: grid; gap: 16px; }
+.wait__card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: var(--pale);
+  border-radius: 28px;
+  padding: 26px 22px 24px;
+}
+.wait__card .ic { width: 34px; height: 34px; color: var(--navy); }
+.wait__card h3 { font-size: 22px; }
+.wait__card p { font-size: 16px; line-height: 1.5; }
+.wait__card a.wait__link { margin-top: auto; font-weight: 700; color: var(--blue-text); text-decoration: underline; text-underline-offset: 3px; }
+.wait__card a.wait__link:hover { color: var(--navy); }
+
+/* ---------- Breakpoints ---------- */
+@media (min-width: 640px) {
+  .thanks h1 { font-size: 40px; }
+  .thanks__cta .btn { flex: 0 1 auto; }
+  .ways__grid, .wait__grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (min-width: 700px) {
+  .ways__grid, .wait__grid { grid-template-columns: repeat(3, 1fr); gap: 20px; }
+}
+
+@media (min-width: 900px) {
+  .hero-top { padding: 0 24px; margin-bottom: 20px; }
+  .thanks { padding: 48px 0 56px; }
+  .thanks__in { grid-template-columns: minmax(0, 1fr) 420px; column-gap: 40px; padding: 0 24px; align-items: start; }
+  .thanks h1 { font-size: 44px; max-width: 24ch; }
+  .nextup h2 { font-size: 40px; }
+  .nextup .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0 30px; }
+  .nextup .steps--line li:last-child { padding-bottom: 0; }
+}
+
+@media (min-width: 1025px) {
+  .hero-top { padding: 0 40px; }
+  .ways { padding: 80px 0 24px; }
+  .ways__grid { padding: 0 24px; gap: 26px; }
+  .ways .center-head { margin-bottom: 36px; }
+  .wcard { padding: 34px 26px 30px; }
+  .thanks { padding: 60px 0 66px; }
+  .thanks__in { grid-template-columns: minmax(0, 1fr) 460px; column-gap: 56px; padding: 0 40px; }
+  .thanks h1 { font-size: 52px; }
+  .thanks__lede { font-size: 19px; }
+  .ready { padding: 32px 30px 30px; border-radius: 30px; }
+  .ready h2 { font-size: 26px; }
+  .nextup { padding: 80px 0 84px; }
+  .nextup h2 { font-size: 46px; line-height: 1.05; }
+  .wait { padding: 80px 0 90px; }
+  .wait__card { padding: 30px 26px 28px; }
+}
+
+@media (min-width: 1280px) {
+  .thanks h1 { font-size: 56px; }
+}
+
+/* Wide screens: keep the sub-page bands on the same 1440px column as the header */
+@media (min-width: 1441px) {
+  .hero-top, .thanks__in, .ways__grid, .wait__grid {
+    padding-inline: max(40px, calc((100% - 1440px) / 2 + 40px));
+  }
+}
+
+/* ---------- verify.html: credential table, honest list, badge row ---------- */
+.verify { background: #fff; padding: 56px 0 46px; }
+.verify--pale { background: var(--pale); }
+.verify__in { max-width: 1100px; margin: 0 auto; padding: 0 var(--gutter); }
+.verify__in h2 { font-size: 30px; margin-bottom: 12px; }
+.verify__lead { max-width: 800px; margin-bottom: 24px; }
+.verify__lead a, .verify__note a { color: var(--blue-text); font-weight: 600; }
+.verify .ctable a { color: var(--blue-text); font-weight: 600; }
+.verify .ctable td:nth-child(2) { color: var(--navy); font-weight: 600; }
+.verify .ctable td:last-child { color: var(--muted); font-weight: 500; }
+.verify__note { margin-top: 18px; font-size: 14px; line-height: 1.6; color: var(--muted); }
+.verify__cta { margin-top: 26px; }
+.verify__badges {
+  justify-content: flex-start;
+  gap: 14px;
+  margin: 18px 0 20px;
+  padding: 16px 14px;
+  background: #fff;
+  border-radius: 20px;
+}
+.verify__badges li { width: 92px; }
+.verify__badges img { height: 48px; }
+.verify__badges span { color: var(--navy); font-size: 11px; }
+.vhonest { display: grid; gap: 14px; }
+.vhonest li {
+  background: #fff;
+  border-left: 5px solid var(--orange);
+  border-radius: 0 20px 20px 0;
+  padding: 18px 20px;
+}
+.verify:not(.verify--pale) .vhonest li { background: var(--pale); }
+.vhonest h3 { font-size: 20px; line-height: 1.25; color: var(--navy); margin-bottom: 6px; }
+.vhonest p { font-size: 15px; line-height: 1.6; }
+
+@media (min-width: 700px) {
+  .vhonest { grid-template-columns: 1fr 1fr; gap: 16px; }
+}
+@media (min-width: 1025px) {
+  .verify { padding: 72px 0 60px; }
+  .verify__in h2 { font-size: 40px; }
+  .verify__lead { font-size: 18px; }
+  .vhonest h3 { font-size: 22px; }
+  .vhonest p { font-size: 16px; }
+}
+
+/* =====================================================================
+   Contact hero (.hero-vs--contact): the form has to clear the fold on a
+   375x667 phone, so the phone reading order is headline -> form -> proof ->
+   call button -> facts/photos, and the desktop columns are placed explicitly:
+     row 1  headline + standfirst   |  quote form (spans rows 1-2)
+     row 2  rating + licence + call |
+     row 3  trust facts             |  install photos
+   ===================================================================== */
+.hero-vs--contact .hero-vs__under { display: grid; gap: 14px; }
+
+/* Phones: trim everything that pushes the submit button down. */
+@media (max-width: 639px) {
+  .hero-vs--contact { padding-top: 16px; }
+  .hero-vs--contact .hero-top { margin-bottom: 10px; }
+  .hero-vs--contact .hero-vs__in { gap: 16px; }
+  .hero-vs--contact .hero-vs__copy > * + * { margin-top: 10px; }
+  .hero-vs--contact h1 { font-size: 27px; line-height: 1.06; }
+  .hero-vs--contact .hero-vs__standfirst { font-size: 15px; line-height: 1.45; }
+  .hero-vs--contact .quote-card { padding: 14px 14px 12px; }
+  .hero-vs--contact .quote-card__live { display: none; } /* the note below the button says the same */
+  .hero-vs--contact .quote-card__title { font-size: 21px; }
+  .hero-vs--contact .quote-card__lede { font-size: 14px; line-height: 1.35; margin-top: 4px; }
+  .hero-vs--contact .quote-card .fgrid { gap: 8px; margin-top: 10px; }
+  .hero-vs--contact .more-toggle { margin: 8px 0 0; padding: 4px 0; font-size: 13px; }
+  .hero-vs--contact .quote-card .btn--block { margin-top: 10px; }
+  .hero-vs--contact .quote-card__note { font-size: 12px; line-height: 1.45; }
+  /* the open-now pill and the breadcrumb share one line */
+  .hero-vs--contact .hero-top { flex-wrap: nowrap; }
+  .hero-vs--contact .open-pill { padding: 5px 12px 5px 10px; font-size: 13px; }
+  .hero-vs--contact .crumb { font-size: 12px; }
+}
+
+@media (min-width: 900px) {
+  .hero-vs--contact .hero-vs__in { grid-template-rows: auto auto 1fr; }
+  .hero-vs--contact .hero-vs__copy { grid-column: 1; grid-row: 1; }
+  .hero-vs--contact .quote-card { grid-column: 2; grid-row: 1 / span 2; }
+  .hero-vs--contact .hero-vs__under { grid-column: 1; grid-row: 2; align-self: start; }
+  .hero-vs--contact .hero-vs__facts { grid-column: 1; grid-row: 3; align-self: start; }
+  .hero-vs--contact .hero-vs__figure { grid-column: 2; grid-row: 3; align-self: start; }
+  .hero-vs--contact .hero-vs__cta .btn { flex: 0 1 auto; }
+}
+
+/* Contact hero, smallest phones: the last 20px needed to get the submit button
+   above the sticky bar on a 375x667 screen. Inputs stay 44px (touch target). */
+@media (max-width: 639px) {
+  .hero-vs--contact .hero-top { margin-bottom: 8px; }
+  .hero-vs--contact .crumb { flex-wrap: nowrap; white-space: nowrap; }
+  .hero-vs--contact .hero-vs__in { gap: 14px; }
+  .hero-vs--contact .field input,
+  .hero-vs--contact .field select { height: 44px; }
+  .hero-vs--contact .field label { font-size: 13px; }
+  .hero-vs--contact .quote-card .btn--block { min-height: 48px; font-size: 17px; }
+}
+
+/* 375px-class phones only: a little more headroom so the submit button stays
+   above the bar even if a fallback font renders the headline taller. */
+@media (max-width: 389px) {
+  /* the live clock makes the pill 233px wide, which overflows a 375px row */
+  .hero-vs--contact .open-pill__time { display: none; }
+  .hero-vs--contact h1 { font-size: 26px; }
+  .hero-vs--contact .hero-vs__in { gap: 12px; }
+  .hero-vs--contact .hero-vs__copy > * + * { margin-top: 8px; }
+}
+
